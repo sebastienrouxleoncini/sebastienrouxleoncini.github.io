@@ -1,0 +1,162 @@
+/* ============================================================
+   Sébastien Roux — Engineering Portfolio
+   Design language ported from the LaTeX portfolio:
+   deep-blue accent, clean sans-serif, project-card layout.
+   ============================================================ */
+
+:root {
+  --accent:    #1F4E79;   /* deep blue  */
+  --accent-dk: #163a5a;   /* hover      */
+  --lightgray: #F2F2F2;
+  --midgray:   #8C8C8C;
+  --darktext:  #2B2B2B;
+  --bg:        #ffffff;
+  --maxw:      1080px;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--darktext);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Sticky nav ---------- */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid #e6e6e6;
+}
+.nav-inner {
+  max-width: var(--maxw); margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+}
+.nav-name { font-weight: 700; color: var(--accent); letter-spacing: .3px; }
+.nav-links { display: flex; gap: 1.15rem; flex-wrap: wrap; }
+.nav-links a {
+  color: var(--midgray); font-size: .82rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .5px;
+}
+.nav-links a:hover { color: var(--accent); text-decoration: none; }
+.nav-toggle { display: none; background: none; border: 0; font-size: 1.5rem; color: var(--accent); cursor: pointer; }
+
+/* ---------- Layout ---------- */
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 1.5rem; }
+section { padding: 4rem 0; border-top: 1px solid #eee; }
+section:first-of-type { border-top: 0; }
+
+/* ---------- Hero ---------- */
+.hero {
+  text-align: center;
+  padding: 4.5rem 1.5rem 3.5rem;
+  border-top: 0;
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  margin: 0 0 .4rem; font-weight: 800; letter-spacing: -.5px;
+}
+.hero .rule { width: 90px; height: 3px; background: var(--accent); margin: 1rem auto 1.2rem; border: 0; }
+.hero .role { font-size: 1.35rem; margin: 0; }
+.hero .spec { font-size: 1.35rem; color: var(--accent); font-weight: 600; margin: .2rem 0 2rem; }
+.hero-img { max-width: 620px; margin: 0 auto 2rem; }
+.hero-img img { border-radius: 6px; box-shadow: 0 10px 30px rgba(0,0,0,.12); }
+.hero-contact { color: var(--midgray); font-size: .98rem; }
+.hero-contact a { font-weight: 600; }
+
+/* ---------- Section headings ---------- */
+.section-eyebrow {
+  color: var(--accent); font-weight: 700; font-size: .8rem;
+  text-transform: uppercase; letter-spacing: 1.5px; margin: 0 0 .3rem;
+}
+.section-title { font-size: 2rem; font-weight: 800; margin: 0 0 1.5rem; }
+
+/* ---------- About ---------- */
+.about-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; margin-bottom: 2rem; }
+.about-grid h3 { color: var(--accent); font-size: .95rem; text-transform: uppercase; letter-spacing: .5px; margin: 0 0 .4rem; }
+.contents-list { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: .5rem 2rem; }
+.contents-list li { position: relative; padding-left: 1.1rem; }
+.contents-list li::before { content: ""; position: absolute; left: 0; top: .62em; width: 6px; height: 6px; background: var(--accent); }
+
+/* ---------- Project cards ---------- */
+.project { }
+.project-head { display: flex; align-items: center; gap: 1.2rem; margin-bottom: .3rem; }
+.project-logo { width: 64px; height: 64px; object-fit: contain; flex-shrink: 0; }
+.project-num { color: var(--accent); font-weight: 700; font-size: .8rem; letter-spacing: 1.5px; text-transform: uppercase; }
+.project-title { font-size: 1.7rem; font-weight: 800; margin: .1rem 0 0; line-height: 1.15; }
+.project-meta { display: flex; justify-content: space-between; color: var(--midgray); font-size: .95rem; margin: .5rem 0 .6rem; flex-wrap: wrap; gap: .3rem; }
+.project-rule { height: 2px; background: var(--accent); border: 0; margin: 0 0 1.4rem; }
+
+.block { margin-bottom: 1.2rem; }
+.block h4 { color: var(--accent); font-size: .82rem; text-transform: uppercase; letter-spacing: .5px; margin: 0 0 .25rem; }
+.block p { margin: 0; }
+
+/* image grids */
+.figrow { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 1.4rem 0; }
+.fig { margin: 1.4rem 0; }
+.fig img { border-radius: 5px; box-shadow: 0 4px 16px rgba(0,0,0,.10); }
+.fig figcaption, .figrow figcaption { color: var(--midgray); font-size: .85rem; margin-top: .45rem; text-align: center; }
+.fig-narrow { max-width: 480px; margin-left: auto; margin-right: auto; }
+
+/* key figure callout */
+.keyfig {
+  background: var(--lightgray); border-radius: 8px;
+  text-align: center; padding: 1.8rem 1.5rem; margin: 1.6rem 0;
+  border-left: 5px solid var(--accent);
+}
+.keyfig .big { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; color: var(--accent); line-height: 1.1; }
+.keyfig .desc { margin-top: .4rem; }
+
+/* video embed */
+.video { margin: 1.6rem 0; }
+.video-frame { position: relative; width: 100%; padding-top: 56.25%; border-radius: 8px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,.15); background: #000; }
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-frame.short { padding-top: 0; height: 640px; max-width: 360px; margin: 0 auto; }
+.video-caption { color: var(--midgray); font-size: .85rem; text-align: center; margin-top: .5rem; }
+
+/* learn-more / link box */
+.linkbox { background: var(--lightgray); border-radius: 8px; padding: 1rem 1.3rem; margin: 1.4rem 0; }
+.linkbox .lbl { color: var(--accent); font-weight: 700; font-size: .78rem; text-transform: uppercase; letter-spacing: .5px; }
+
+/* ---------- Skills ---------- */
+.skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.6rem; }
+.skill h4 { color: var(--accent); font-size: .9rem; text-transform: uppercase; letter-spacing: .5px; margin: 0 0 .3rem; }
+.skill p { margin: 0; }
+
+/* ---------- Contact card ---------- */
+.contact-card {
+  background: var(--lightgray); border-radius: 10px; text-align: center;
+  padding: 2.5rem 1.5rem; margin-top: 2.5rem;
+}
+.contact-card h3 { font-size: 1.6rem; margin: 0 0 .6rem; }
+.contact-card p { margin: .2rem 0; }
+.contact-card .links { margin-top: 1rem; display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; }
+.contact-card .links a { font-weight: 600; }
+
+footer { text-align: center; color: var(--midgray); font-size: .85rem; padding: 2rem 1.5rem 3rem; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 780px) {
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; gap: 0; padding: .5rem 1.5rem 1rem; border-bottom: 1px solid #e6e6e6; }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: .5rem 0; }
+  .nav-toggle { display: block; }
+  .about-grid { grid-template-columns: 1fr; }
+  .contents-list { grid-template-columns: 1fr; }
+  .figrow { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .project-logo { width: 48px; height: 48px; }
+}
