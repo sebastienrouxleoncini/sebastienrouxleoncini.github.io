@@ -1,17 +1,17 @@
 /* ============================================================
    Sébastien Roux — Engineering Portfolio
-   Dark, bold, Harmattan-AI-inspired theme.
+   Light theme, bold Harmattan-AI-inspired typography.
    ============================================================ */
 
 :root {
-  --bg:        #0a0b0d;
-  --bg-elev:   #15171b;
-  --bg-elev-2: #1c1f24;
-  --border:    #262a30;
-  --text:      #f2f3f5;
-  --text-dim:  #9aa3ad;
-  --accent:    #4c8dff;
-  --accent-2:  #f5d90a;
+  --bg:        #ffffff;
+  --bg-elev:   #f5f6f8;
+  --bg-elev-2: #eceef1;
+  --border:    #e2e5e9;
+  --text:      #16181b;
+  --text-dim:  #6b7280;
+  --accent:    #2f5fd6;
+  --accent-2:  #b5790a;
   --sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --maxw: 980px;
@@ -41,15 +41,15 @@ a:hover { text-decoration: underline; }
   padding: 3.2rem 1.5rem 0;
   text-align: center;
   background:
-    radial-gradient(ellipse 800px 400px at 50% -10%, rgba(76,141,255,0.16), transparent 70%),
+    radial-gradient(ellipse 800px 400px at 50% -10%, rgba(47,95,214,0.08), transparent 70%),
     var(--bg);
 }
 
 .avatar-wrap {
-  width: 132px; height: 132px;
-  margin: 0 auto 1.1rem;
+  width: 200px; height: 200px;
+  margin: 0 auto 1.3rem;
   border-radius: 50%;
-  padding: 3px;
+  padding: 4px;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
 }
 .avatar {
@@ -57,7 +57,7 @@ a:hover { text-decoration: underline; }
   border-radius: 50%;
   object-fit: cover;
   object-position: 50% 30%;
-  border: 3px solid var(--bg);
+  border: 4px solid var(--bg);
   display: block;
 }
 
@@ -71,7 +71,7 @@ a:hover { text-decoration: underline; }
 .tagline {
   color: var(--text-dim);
   font-size: 1.02rem;
-  max-width: 480px;
+  max-width: 500px;
   margin: 0 auto 1.6rem;
 }
 
@@ -129,17 +129,6 @@ a:hover { text-decoration: underline; }
 .summary { color: var(--text-dim); font-size: 1.05rem; max-width: 720px; margin-bottom: 2.4rem; }
 .summary strong { color: var(--text); }
 
-.cv-actions { margin-bottom: 3rem; }
-.btn {
-  display: inline-flex; align-items: center; gap: .5rem;
-  font-family: var(--mono); font-size: .82rem; font-weight: 500;
-  text-transform: uppercase; letter-spacing: .06em;
-  background: var(--accent); color: #05070a;
-  padding: .8rem 1.4rem; border-radius: 6px;
-  border: none; cursor: pointer;
-}
-.btn:hover { background: #6ba0ff; text-decoration: none; }
-
 .timeline {
   position: relative;
   margin-left: 2rem;
@@ -156,6 +145,7 @@ a:hover { text-decoration: underline; }
   width: 3.4rem; height: 3.4rem;
   border-radius: 10px;
   background: #fff;
+  border: 1px solid var(--border);
   display: flex; align-items: center; justify-content: center;
   padding: .45rem;
   box-shadow: 0 0 0 4px var(--bg);
@@ -197,7 +187,7 @@ a:hover { text-decoration: underline; }
 .project-list { display: flex; flex-direction: column; gap: 5rem; }
 .project { }
 .project-head { display: flex; align-items: center; gap: 1.1rem; margin-bottom: .3rem; }
-.project-logo { width: 56px; height: 56px; object-fit: contain; background: #fff; border-radius: 8px; padding: .4rem; flex-shrink: 0; }
+.project-logo { width: 56px; height: 56px; object-fit: contain; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: .4rem; flex-shrink: 0; }
 .project-num { font-family: var(--mono); color: var(--accent); font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; }
 .project-title { font-size: 1.5rem; font-weight: 800; margin: .15rem 0 0; line-height: 1.2; }
 .project-meta { display: flex; justify-content: space-between; color: var(--text-dim); font-size: .9rem; margin: .6rem 0 1.6rem; flex-wrap: wrap; gap: .3rem; font-family: var(--mono); }
@@ -226,8 +216,8 @@ a:hover { text-decoration: underline; }
 
 /* ---------- Carousel ---------- */
 .carousel { position: relative; margin: 1.8rem 0; border-radius: 10px; overflow: hidden; background: var(--bg-elev); border: 1px solid var(--border); }
-.carousel-track { display: flex; transition: transform .4s ease; }
-.carousel-slide { min-width: 100%; flex-shrink: 0; }
+.carousel-track { display: flex; width: 100%; transition: transform .4s ease; }
+.carousel-slide { flex: 0 0 100%; width: 100%; max-width: 100%; }
 .carousel-slide img { width: 100%; max-height: 560px; object-fit: contain; background: #000; }
 .carousel-slide .video-frame { position: relative; width: 100%; padding-top: 56.25%; background: #000; }
 .carousel-slide .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
@@ -236,14 +226,14 @@ a:hover { text-decoration: underline; }
 .car-btn {
   position: absolute; top: 0; bottom: 0;
   width: 3rem;
-  background: linear-gradient(to right, rgba(0,0,0,.55), transparent);
+  background: linear-gradient(to right, rgba(0,0,0,.45), transparent);
   border: none; color: #fff; font-size: 1.8rem; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
   opacity: 0; transition: opacity .15s ease;
 }
 .carousel:hover .car-btn { opacity: 1; }
 .car-btn.prev { left: 0; justify-content: flex-start; padding-left: .6rem; }
-.car-btn.next { right: 0; justify-content: flex-end; padding-right: .6rem; background: linear-gradient(to left, rgba(0,0,0,.55), transparent); }
+.car-btn.next { right: 0; justify-content: flex-end; padding-right: .6rem; background: linear-gradient(to left, rgba(0,0,0,.45), transparent); }
 
 .car-dots { display: flex; justify-content: center; gap: .45rem; padding: .8rem 0; background: var(--bg-elev-2); }
 .car-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--border); border: none; cursor: pointer; padding: 0; }
@@ -267,6 +257,7 @@ footer { text-align: center; color: var(--text-dim); font-size: .82rem; padding:
 
 /* ---------- Responsive ---------- */
 @media (max-width: 700px) {
+  .avatar-wrap { width: 150px; height: 150px; }
   .skills-grid { grid-template-columns: 1fr; }
   .timeline { margin-left: .5rem; padding-left: 2.2rem; }
   .timeline-logo { width: 2.9rem; height: 2.9rem; left: -2.2rem; }
