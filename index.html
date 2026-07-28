@@ -5,300 +5,414 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sébastien Roux — Robotics Hardware Design & Validation</title>
   <meta name="description" content="Engineering portfolio of Sébastien Roux, mechanical engineer (EPFL) specialised in robotics hardware design and validation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ===================== NAV ===================== -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <span class="nav-name">Sébastien Roux</span>
-      <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
-      <div class="nav-links" id="navlinks">
-        <a href="#about">About</a>
-        <a href="#odewa">ODEWA</a>
-        <a href="#airaro">Thesis</a>
-        <a href="#biorob">BioRob</a>
-        <a href="#rrl">Platform</a>
-        <a href="#motor">In-Wheel</a>
-        <a href="#zf">ZF</a>
-        <a href="#gripper">Gripper</a>
-        <a href="#hull">Hull Cleaner</a>
-        <a href="#contact">Contact</a>
+  <!-- ===================== PERSISTENT TOP: PROFILE + TABS ===================== -->
+  <header class="topbar">
+    <div class="profile">
+      <div class="avatar-wrap">
+        <img class="avatar" src="figures/profile.jpg" alt="Sébastien Roux">
       </div>
+      <h1>Sébastien Roux</h1>
+      <p class="tagline">Mechanical engineer who builds things that get wet, fall over, or carry humans — and comes back with data every time.</p>
     </div>
-  </nav>
-
-  <!-- ===================== HERO ===================== -->
-  <header class="hero">
-    <h1>Sébastien Roux</h1>
-    <hr class="rule">
-    <p class="role">Mechanical Engineer</p>
-    <p class="spec">Robotics Hardware Design &amp; Validation</p>
-    <div class="hero-img">
-      <img src="figures/Pleurobot.png" alt="Salamander robot prototype">
-    </div>
-    <p class="hero-contact">
-      <a href="mailto:sebastienleonciniroux@gmail.com">sebastienleonciniroux@gmail.com</a>
-      &nbsp;·&nbsp; +33 7 86 82 09 55 &nbsp;·&nbsp;
-      <a href="https://linkedin.com/in/sebastien-roux-6102171a0/" target="_blank" rel="noopener">LinkedIn</a>
-    </p>
+    <nav class="tabs" role="tablist">
+      <button class="tab-btn active" data-tab="cv">CV</button>
+      <button class="tab-btn" data-tab="projects">Projects</button>
+      <button class="tab-btn" data-tab="contact">Contact</button>
+    </nav>
   </header>
 
-  <div class="wrap">
+  <main class="wrap">
 
-  <!-- ===================== ABOUT ===================== -->
-  <section id="about">
-    <p class="section-eyebrow">About this portfolio</p>
-    <h2 class="section-title">Who I am and how I work</h2>
-    <div class="about-grid">
-      <div>
-        <h3>Who I am</h3>
-        <p>A mechanical engineer from EPFL, specialised in Design &amp; Production with a minor in Management &amp; Technology of Entrepreneurship. My work focuses on robotic and electromechanical systems: machines that move, interact with the physical world, and have to survive it.</p>
+    <!-- ===================== CV TAB ===================== -->
+    <section id="tab-cv" class="tab-panel active">
+      <p class="eyebrow">Curriculum Vitae</p>
+      <h2 class="section-title">A robotics loop, run four times over</h2>
+      <p class="summary">
+        Mechanical engineer who likes building systems that survive the real world, not just the lab bench.
+        <strong>Graduating from EPFL</strong> (Master in Design and Production) with hands-on experience across
+        four robotics and energy R&amp;D programs, owning hardware from concept and CAD through fabrication,
+        bench testing, and in-situ field validation.
+      </p>
+
+      <div class="cv-actions">
+        <a class="btn" href="files/CV_Sebastien_Roux.pdf" download>⭳ Download CV (PDF)</a>
       </div>
-      <div>
-        <h3>How I work</h3>
-        <p>Every project here follows the loop robots demand: model, build, test on real hardware, iterate with data. Design decisions should be settled by measurements, not intuition alone — from a machine deployed in the field in French Polynesia to a Master thesis turning live plant data into a validated design tool.</p>
+
+      <p class="eyebrow" style="margin-top:1rem;">Timeline</p>
+      <ol class="timeline">
+
+        <li class="timeline-item">
+          <span class="timeline-logo"><img src="figures/airaro.png" alt="AIRARO"></span>
+          <div class="timeline-body">
+            <p class="timeline-date">Mar 2026 – Sept 2026</p>
+            <h3 class="timeline-title">R&amp;D Engineering Intern</h3>
+            <p class="timeline-org">AIRARO SAS — Master Thesis</p>
+            <p class="timeline-desc">Built a sizing tool from live SWAC plant data, combining thermal, hydraulic and economic modelling. Identified design changes improving COP by 25%.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <span class="timeline-logo chip">EPFL</span>
+          <div class="timeline-body">
+            <p class="timeline-date">2026</p>
+            <h3 class="timeline-title">Master in Mechanical Engineering</h3>
+            <p class="timeline-org">EPFL — Design &amp; Production, minor in Management &amp; Technology of Entrepreneurship</p>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <span class="timeline-logo"><img src="figures/odewa.png" alt="ODEWA"></span>
+          <div class="timeline-body">
+            <p class="timeline-date">Sept 2025 – Feb 2026</p>
+            <h3 class="timeline-title">R&amp;D Engineering Intern</h3>
+            <p class="timeline-org">ODEWA — French Polynesia</p>
+            <p class="timeline-desc">Owned the full lifecycle of an automated underwater waste-extraction machine: specs, CAD, FEA, fabrication and field validation. 1 tonne extracted in 2 days on site.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <span class="timeline-logo"><img src="figures/biorob.png" alt="BioRob Lab"></span>
+          <div class="timeline-body">
+            <p class="timeline-date">Feb 2025 – Jul 2025</p>
+            <h3 class="timeline-title">Compliant Biomimetic Feet</h3>
+            <p class="timeline-org">BioRob Lab, EPFL</p>
+            <p class="timeline-desc">Designed and bench-tested compliant feet for a salamander robot; integrated and validated with motion capture — +15% locomotion efficiency.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <span class="timeline-logo"><img src="figures/rrl.png" alt="Reconfigurable Robotics Lab"></span>
+          <div class="timeline-body">
+            <p class="timeline-date">Sept 2024 – Feb 2025</p>
+            <h3 class="timeline-title">3-DOF Robotic Platform</h3>
+            <p class="timeline-org">Reconfigurable Robotics Lab, EPFL</p>
+            <p class="timeline-desc">Redesigned the platform structure to carry a human; built a real-time video-to-motion pipeline to drive it.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <span class="timeline-logo chip">SR</span>
+          <div class="timeline-body">
+            <p class="timeline-date">Sept 2024 – Jan 2025</p>
+            <h3 class="timeline-title">Smart Gripper</h3>
+            <p class="timeline-org">Personal project</p>
+            <p class="timeline-desc">A mechanical grasp mechanism with weight sensing — no active force control needed.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <span class="timeline-logo"><img src="figures/zf.png" alt="ZF Group"></span>
+          <div class="timeline-body">
+            <p class="timeline-date">2024</p>
+            <h3 class="timeline-title">Energy Storage Optimization</h3>
+            <p class="timeline-org">Collaboration with ZF Group</p>
+            <p class="timeline-desc">Reduced-scale physical demonstrator with Arduino-integrated hardware for a battery-swap station, plus a business model study.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <span class="timeline-logo chip">SR</span>
+          <div class="timeline-body">
+            <p class="timeline-date">Jan 2024 – Jun 2024</p>
+            <h3 class="timeline-title">Autonomous Hull Cleaning Robot</h3>
+            <p class="timeline-org">Product development study</p>
+            <p class="timeline-desc">Concept-phase study from user needs to candidate architectures and detailed design.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <span class="timeline-logo chip">EPFL</span>
+          <div class="timeline-body">
+            <p class="timeline-date">2023</p>
+            <h3 class="timeline-title">Bachelor in Mechanical Engineering</h3>
+            <p class="timeline-org">EPFL</p>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <span class="timeline-logo"><img src="figures/RT-logo.png" alt="EPFL Racing Team"></span>
+          <div class="timeline-body">
+            <p class="timeline-date">Feb 2022 – Aug 2023</p>
+            <h3 class="timeline-title">In-Wheel Electric Propulsion</h3>
+            <p class="timeline-org">EPFL Racing Team — Formula Student</p>
+            <p class="timeline-desc">Designed and optimised an in-wheel gearbox under tight thermal, mass and regulatory constraints, from concept to a raced vehicle.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <span class="timeline-logo chip">LFT</span>
+          <div class="timeline-body">
+            <p class="timeline-date">2019</p>
+            <h3 class="timeline-title">French Baccalauréat</h3>
+            <p class="timeline-org">Lycée Français de Toronto</p>
+          </div>
+        </li>
+
+      </ol>
+
+      <div class="skills-grid">
+        <div class="skill"><h4>Robotics</h4><p>Kinematics and structural redesign of robotic platforms, closed-loop control, real-time motion extraction from video, compliant mechanism design, sensor integration and instrumentation, embedded electronics (Arduino).</p></div>
+        <div class="skill"><h4>CAD &amp; Design</h4><p>SolidWorks, CATIA V5/V6, 3DEXPERIENCE, Fusion 360. Design for manufacturing and assembly (DFM/DFA).</p></div>
+        <div class="skill"><h4>Simulation &amp; Analysis</h4><p>Abaqus (static FEA), MATLAB, Python, C.</p></div>
+        <div class="skill"><h4>Prototyping &amp; Testing</h4><p>Hands-on fabrication, test-bench design, instrumentation and data acquisition, root-cause analysis, design iteration from measured results.</p></div>
       </div>
-      <div>
-        <h3>What I bring</h3>
-        <p>End-to-end ownership, from first specifications and CAD to fabrication and field validation. The ability to bridge mechanics, control and data. And the habit of closing the loop: every measured result here fed a design decision.</p>
+
+      <p class="languages"><strong>Languages —</strong> French (native, C2), English (fluent, C2), Spanish (basic, A2)</p>
+    </section>
+
+    <!-- ===================== PROJECTS TAB ===================== -->
+    <section id="tab-projects" class="tab-panel">
+      <p class="eyebrow">Selected Work</p>
+      <h2 class="section-title">Eight projects, one loop: model, build, test, iterate</h2>
+
+      <div class="project-list">
+
+        <!-- 01 ODEWA -->
+        <div class="project" id="odewa">
+          <div class="project-head">
+            <img class="project-logo" src="figures/odewa.png" alt="ODEWA logo">
+            <div>
+              <span class="project-num">Project 01</span>
+              <h3 class="project-title">A Functional Extraction Machine in 6 Months</h3>
+            </div>
+          </div>
+          <div class="project-meta"><span>ODEWA — R&amp;D Engineering Internship, French Polynesia</span><span>Sept 2025 – Feb 2026</span></div>
+
+          <div class="block"><h4>Context &amp; constraints</h4><p>Pearl farming in French Polynesia generates large volumes of underwater waste with no existing extraction solution. The mission: design, build and validate an automated machine to extract, clean and sort this waste, under a marine environment, remote logistics, local fabrication only, and a hard 6-month deadline.</p></div>
+          <div class="block"><h4>My role</h4><p>Sole engineer owning the complete cycle: requirements, concept selection, CAD, structural sizing, fabrication, and in-situ testing.</p></div>
+
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="figures/CAD_Odewa.png" alt="CAD render of first prototype"><p class="carousel-cap">CAD render of the first prototype</p></div>
+              <div class="carousel-slide"><img src="figures/Proto1_odewa.jpeg" alt="First prototype fabricated"><p class="carousel-cap">First prototype fabricated and assembled</p></div>
+              <div class="carousel-slide"><img src="figures/odewa_test.png" alt="Prototype deployed in lagoon"><p class="carousel-cap">Deployed for 4 days of testing in the lagoon of Takaroa</p></div>
+              <div class="carousel-slide"><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/v9D9Ljt6uQk" title="ODEWA prototype in action" allowfullscreen loading="lazy"></iframe></div><p class="carousel-cap">Prototype 1 in action during field tests</p></div>
+            </div>
+            <button class="car-btn prev" aria-label="Previous">‹</button>
+            <button class="car-btn next" aria-label="Next">›</button>
+            <div class="car-dots"></div>
+          </div>
+
+          <div class="keyfig"><div class="big">1 tonne in 2 days</div><div class="desc">of underwater waste extracted and cleaned during field validation</div></div>
+
+          <div class="block"><h4>Design approach</h4><p>The architecture was selected against five criteria: robustness in a marine environment, ease of local fabrication, maintainability by non-engineers, compatibility with different boat types, and shipping in a standard container. Structural models and FEA sized the key components before committing to fabrication.</p></div>
+          <div class="block"><h4>From field data to prototype 2</h4><p>Field data exposed gaps no simulation had predicted, and drove prototype 2 directly: separating extraction from cleaning, with a high-throughput extraction system on a barge and a dedicated cleaning module on land.</p></div>
+        </div>
+
+        <!-- 02 AIRARO -->
+        <div class="project" id="airaro">
+          <div class="project-head">
+            <img class="project-logo" src="figures/airaro.png" alt="AIRARO logo">
+            <div>
+              <span class="project-num">Project 02</span>
+              <h3 class="project-title">A Sizing Tool Built from Live Plant Data</h3>
+            </div>
+          </div>
+          <div class="project-meta"><span>AIRARO SAS — Master Thesis, R&amp;D Engineering Internship</span><span>Mar 2026 – Sept 2026</span></div>
+
+          <div class="block"><h4>Context &amp; constraints</h4><p>Sea Water Air Conditioning (SWAC) plants use deep cold seawater for large-scale cooling. Sizing a new plant is a high-stakes decision — expensive infrastructure that locks in decades of operating cost. AIRARO needed a way to design future systems from evidence rather than rules of thumb.</p></div>
+          <div class="block"><h4>My role &amp; approach</h4><p>Six months of full-time work as my Master thesis. Starting from operating data of a live SWAC plant, I built thermal and hydraulic models validated against the real installation, then turned them into a generic sizing tool that searches the design space for the best configuration.</p></div>
+
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="figures/SWAC.jpeg" alt="SWAC plant technical room"><p class="carousel-cap">Technical room of a SWAC plant</p></div>
+            </div>
+            <button class="car-btn prev" aria-label="Previous">‹</button>
+            <button class="car-btn next" aria-label="Next">›</button>
+            <div class="car-dots"></div>
+          </div>
+
+          <div class="keyfig"><div class="big">COP +25%</div><div class="desc">coefficient of performance gain identified by the sizing tool</div></div>
+
+          <div class="block"><h4>Engineering meets economics</h4><p>The tool optimises while accounting for CAPEX and OPEX — the output is not just feasible, it's profitable. Integrated directly into the company's business plan.</p></div>
+        </div>
+
+        <!-- 03 BIOROB -->
+        <div class="project" id="biorob">
+          <div class="project-head">
+            <img class="project-logo" src="figures/biorob.png" alt="BioRob logo">
+            <div>
+              <span class="project-num">Project 03</span>
+              <h3 class="project-title">Compliant Feet for a Salamander Robot</h3>
+            </div>
+          </div>
+          <div class="project-meta"><span>BioRob Laboratory, EPFL — research project</span><span>Feb 2025 – Jul 2025</span></div>
+
+          <div class="block"><h4>Context &amp; constraints</h4><p>Most quadruped robots use ball-joint feet and don't exploit complex ground contact. The goal: improve locomotion efficiency of an existing salamander-like robot with passive compliant feet, without modifying the rest of the platform.</p></div>
+          <div class="block"><h4>Design decisions &amp; why</h4><p>I designed compliant foot structures exploring stiffness vs. energy return, prototyped them, and characterised each candidate on a dedicated test bench before integration. Bench data selected the final design.</p></div>
+
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="figures/Final_design.png" alt="Salamander robot with compliant feet"><p class="carousel-cap">Salamander robot with the compliant feet integrated</p></div>
+              <div class="carousel-slide"><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/v9D9Ljt6uQk" title="Robot locomotion with compliant feet" allowfullscreen loading="lazy"></iframe></div><p class="carousel-cap">Robot locomotion with compliant feet</p></div>
+            </div>
+            <button class="car-btn prev" aria-label="Previous">‹</button>
+            <button class="car-btn next" aria-label="Next">›</button>
+            <div class="car-dots"></div>
+          </div>
+
+          <div class="keyfig"><div class="big">+15% locomotion efficiency</div><div class="desc">measured on the robot after integration of the compliant feet</div></div>
+
+          <div class="block"><h4>What I learned</h4><p>Bench data predicted the trend but not the exact gain — final validation always belongs on the real robot. Compliance is a tuning problem: the right stiffness depends on the task.</p></div>
+        </div>
+
+        <!-- 04 RRL -->
+        <div class="project" id="rrl">
+          <div class="project-head">
+            <img class="project-logo" src="figures/rrl.png" alt="RRL logo">
+            <div>
+              <span class="project-num">Project 04</span>
+              <h3 class="project-title">Redesigning a 3-DOF Motion Platform to Carry a Human</h3>
+            </div>
+          </div>
+          <div class="project-meta"><span>Reconfigurable Robotics Laboratory, EPFL — research project</span><span>Sept 2024 – Feb 2025</span></div>
+
+          <div class="block"><h4>Context &amp; constraints</h4><p>An existing 3-DOF motion platform had to be upgraded to sustain a human's weight — a hard safety requirement — then driven by periodic locomotion extracted in real time from multimodal inputs.</p></div>
+          <div class="block"><h4>Structural redesign &amp; control</h4><p>I reworked the structure for human safety (load cases, stiffness targets, safety factors) and implemented real-time extraction of periodic locomotion from video to drive the platform, closing the loop from raw signals to physical motion.</p></div>
+
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="figures/New_design.png" alt="Motion platform reworked design"><p class="carousel-cap">Motion platform with the reworked structural design</p></div>
+              <div class="carousel-slide"><img src="figures/pipeline.png" alt="Pipeline diagram"><p class="carousel-cap">Pipeline: video input to motion platform via periodic extraction</p></div>
+              <div class="carousel-slide"><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/DRUOvc0bIHY" title="Platform driven by extracted periodic locomotion" allowfullscreen loading="lazy"></iframe></div><p class="carousel-cap">Platform driven by extracted periodic locomotion</p></div>
+            </div>
+            <button class="car-btn prev" aria-label="Previous">‹</button>
+            <button class="car-btn next" aria-label="Next">›</button>
+            <div class="car-dots"></div>
+          </div>
+
+          <div class="block"><h4>What I learned</h4><p>Redesigning the platform's kinematics meant redesigning its control too — combining mechanical design, kinematics and control in the same loop, not as separate steps.</p></div>
+        </div>
+
+        <!-- 05 IN-WHEEL MOTOR -->
+        <div class="project" id="motor">
+          <div class="project-head">
+            <img class="project-logo" src="figures/RT-logo.png" alt="EPFL Racing Team logo">
+            <div>
+              <span class="project-num">Project 05</span>
+              <h3 class="project-title">In-Wheel Motor &amp; Gearbox for a Formula Student Car</h3>
+            </div>
+          </div>
+          <div class="project-meta"><span>EPFL Racing Team</span><span>Feb 2022 – Aug 2023</span></div>
+
+          <div class="block"><h4>Context &amp; constraints</h4><p>An in-wheel propulsion system is an integrated actuator: motor, gearbox, bearings, cooling and structure packed into a wheel, under hard constraints of unsprung mass, thermal load, packaging and racing regulations.</p></div>
+          <div class="block"><h4>My role &amp; design decisions</h4><p>I owned the gearbox design and the integration of the complete wheel assembly, trading gear geometry, bearing arrangement and lubrication against mass and thermal limits — the same problem central to actuator design across robotics.</p></div>
+
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="figures/eclatee_joliee.png" alt="Exploded CAD view of wheel assembly"><p class="carousel-cap">Exploded CAD view of the wheel assembly</p></div>
+              <div class="carousel-slide"><img src="figures/LRT_RollOut.jpeg" alt="Final car"><p class="carousel-cap">Final car integrating the wheel assembly, EPFL Racing Team</p></div>
+            </div>
+            <button class="car-btn prev" aria-label="Previous">‹</button>
+            <button class="car-btn next" aria-label="Next">›</button>
+            <div class="car-dots"></div>
+          </div>
+
+          <div class="block"><h4>What I learned</h4><p>Integrating with parts built by other teams — powertrain, cooling, structure — exposed the real gap between a CAD assembly that mates on screen and the same parts on a workbench, where manufacturing has the final word.</p></div>
+
+          <div class="linkbox"><span class="lbl">Learn more</span> &nbsp; EPFL Racing Team &nbsp; <a href="https://epflracingteam.ch" target="_blank" rel="noopener">epflracingteam.ch</a></div>
+        </div>
+
+        <!-- 06 ZF -->
+        <div class="project" id="zf">
+          <div class="project-head">
+            <img class="project-logo" src="figures/zf.png" alt="ZF Group logo">
+            <div>
+              <span class="project-num">Project 06</span>
+              <h3 class="project-title">Hardware Integration for a Battery Swap Station Optimiser</h3>
+            </div>
+          </div>
+          <div class="project-meta"><span>Collaboration with ZF Group</span><span>2024</span></div>
+
+          <div class="block"><h4>The work</h4><p>The core was a Python model of a battery swap station optimising energy flows and battery capacities for a fleet of electric commercial vehicles. I built a reduced-scale physical model demonstrating the optimiser's decisions live in hardware, translating the model's outputs into hardware behaviour through Arduino and electronics.</p></div>
+
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="figures/Battery.png" alt="Reduced-scale battery swap station model"><p class="carousel-cap">Reduced-scale physical model of a battery swapping station</p></div>
+            </div>
+            <button class="car-btn prev" aria-label="Previous">‹</button>
+            <button class="car-btn next" aria-label="Next">›</button>
+            <div class="car-dots"></div>
+          </div>
+        </div>
+
+        <!-- 07 GRIPPER -->
+        <div class="project" id="gripper">
+          <div class="project-head">
+            <div>
+              <span class="project-num">Project 07</span>
+              <h3 class="project-title">A Simple, Effective Gripper for a Robotic Arm</h3>
+            </div>
+          </div>
+          <div class="project-meta"><span>Personal project</span><span>Sept 2024 – Jan 2025</span></div>
+
+          <div class="block"><h4>Design decisions &amp; why</h4><p>The gripper closes until a foam pad on each finger presses a button, so grip force is set by the mechanical design itself rather than a control loop. Finger thickness and length were tuned to get the right bend under load. A separate load sensor weighed the object while held.</p></div>
+
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="figures/gripper_proto.jpeg" alt="Gripper prototype"><p class="carousel-cap">Functional gripper prototype</p></div>
+            </div>
+            <button class="car-btn prev" aria-label="Previous">‹</button>
+            <button class="car-btn next" aria-label="Next">›</button>
+            <div class="car-dots"></div>
+          </div>
+
+          <div class="block"><h4>What I learned</h4><p>A well-placed sensor can replace a control loop entirely — the foam and button did in hardware what a force sensor and control logic would have done in software, at a fraction of the complexity.</p></div>
+        </div>
+
+        <!-- 08 HULL CLEANER -->
+        <div class="project" id="hull">
+          <div class="project-head">
+            <div>
+              <span class="project-num">Project 08</span>
+              <h3 class="project-title">Autonomous Hull Cleaning Robot</h3>
+            </div>
+          </div>
+          <div class="project-meta"><span>Product development study, concept phase</span><span>Jan 2024 – Jun 2024</span></div>
+
+          <div class="block"><h4>Context &amp; constraints</h4><p>A concept study for a mobile robot to autonomously clean boat hulls, covering the full product development process from user needs to candidate architectures, selection and detailed design.</p></div>
+          <div class="block"><h4>Architecture decisions</h4><p>Critical decisions centred on actuator selection and making structural, hydraulic and electrical subsystems coexist — including low- and high-voltage electronics on the same platform.</p></div>
+
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="figures/Final_design_hull.jpg" alt="Hull cleaner final design render"><p class="carousel-cap">Final design render</p></div>
+            </div>
+            <button class="car-btn prev" aria-label="Previous">‹</button>
+            <button class="car-btn next" aria-label="Next">›</button>
+            <div class="car-dots"></div>
+          </div>
+        </div>
+
       </div>
-    </div>
-    <p class="section-eyebrow" style="margin-top:2rem;">Portfolio contents</p>
-    <ul class="contents-list">
-      <li><strong>ODEWA</strong> — an automated extraction machine, blank page to field deployment in 6 months</li>
-      <li><strong>Master Thesis, AIRARO</strong> — a sizing tool built from live plant data</li>
-      <li><strong>Compliant Feet, BioRob Lab</strong> — +15% locomotion efficiency on a salamander robot</li>
-      <li><strong>3-DOF Motion Platform, RRL</strong> — redesigned to carry a human</li>
-      <li><strong>In-Wheel Motor, EPFL Racing Team</strong> — a compact integrated actuator</li>
-      <li><strong>ZF Group</strong> — hardware integration for a battery swap station optimiser</li>
-      <li><strong>Gripper</strong> — a mechanical grasp mechanism with weight sensing</li>
-      <li><strong>Autonomous Hull Cleaner</strong> — product development study of a mobile robot</li>
-    </ul>
-  </section>
+    </section>
 
-  <!-- ===================== 01 ODEWA ===================== -->
-  <section id="odewa" class="project">
-    <div class="project-head">
-      <img class="project-logo" src="figures/odewa.png" alt="ODEWA logo">
-      <div>
-        <span class="project-num">Project 01</span>
-        <h2 class="project-title">A Functional Extraction Machine in 6 Months</h2>
+    <!-- ===================== CONTACT TAB ===================== -->
+    <section id="tab-contact" class="tab-panel">
+      <p class="eyebrow">Get in touch</p>
+      <h2 class="section-title">Let's build something that survives contact with reality</h2>
+      <div class="contact-card">
+        <h3>Sébastien Roux</h3>
+        <p>sebastienleonciniroux@gmail.com</p>
+        <p>+33 7 86 82 09 55</p>
+        <div class="links">
+          <a href="mailto:sebastienleonciniroux@gmail.com">Email</a>
+          <a href="https://linkedin.com/in/sebastien-roux-6102171a0/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="files/CV_Sebastien_Roux.pdf" download>Download CV</a>
+        </div>
       </div>
-    </div>
-    <div class="project-meta"><span>ODEWA — R&amp;D Engineering Internship, French Polynesia</span><span>Sept 2025 – Feb 2026</span></div>
-    <hr class="project-rule">
+    </section>
 
-    <div class="block"><h4>Context &amp; constraints</h4><p>Pearl farming in French Polynesia generates large volumes of underwater waste with no existing extraction solution. The mission: design, build and validate an automated machine to extract, clean and sort this waste. The constraints were severe — a marine environment, a remote location, local fabrication only, and a hard 6-month deadline covering the full development cycle.</p></div>
-    <div class="block"><h4>My role</h4><p>Sole engineer owning the complete cycle: requirements, concept selection, CAD, structural sizing, fabrication, and in-situ testing — in a fast-paced environment with direct exposure to the end users.</p></div>
-
-    <div class="figrow">
-      <figure><img src="figures/CAD_Odewa.png" alt="CAD render of first prototype"><figcaption>CAD render of the first prototype</figcaption></figure>
-      <figure><img src="figures/Proto1_odewa.jpeg" alt="First prototype fabricated"><figcaption>First prototype fabricated and assembled</figcaption></figure>
-    </div>
-
-    <div class="block"><h4>Design approach</h4><p>The architecture was selected against five criteria: robustness in a marine environment, ease of local fabrication, maintainability by non-engineers, compatibility with different boat types, and shipping in a standard container. Structural models and FEA sized the key components before committing to fabrication, keeping the design low cost at every step.</p></div>
-
-    <div class="keyfig"><div class="big">1 tonne in 2 days</div><div class="desc">of underwater waste extracted and cleaned during field validation</div></div>
-
-    <figure class="fig"><img src="figures/odewa_test.png" alt="Prototype deployed in lagoon"><figcaption>Prototype deployed for 4 days of testing in the lagoon of Takaroa</figcaption></figure>
-
-    <div class="video">
-      <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/v9D9Ljt6uQk" title="ODEWA prototype in action" allowfullscreen loading="lazy"></iframe></div>
-      <p class="video-caption">Prototype 1 in action during field tests</p>
-    </div>
-
-    <div class="block"><h4>From field data to prototype 2</h4><p>Field data exposed gaps no simulation had predicted, and drove prototype 2 directly: separating extraction from cleaning entirely, with a high-throughput extraction system on a barge and a dedicated, more ergonomic cleaning module on land — targeting a faster, more compact system for future deployments.</p></div>
-  </section>
-
-  <!-- ===================== 02 AIRARO ===================== -->
-  <section id="airaro" class="project">
-    <div class="project-head">
-      <img class="project-logo" src="figures/airaro.png" alt="AIRARO logo">
-      <div>
-        <span class="project-num">Project 02</span>
-        <h2 class="project-title">A Sizing Tool Built from Live Plant Data</h2>
-      </div>
-    </div>
-    <div class="project-meta"><span>AIRARO SAS — Master Thesis, R&amp;D Engineering Internship</span><span>Mar – Sept 2026</span></div>
-    <hr class="project-rule">
-
-    <div class="block"><h4>Context &amp; constraints</h4><p>Sea Water Air Conditioning (SWAC) plants use deep cold seawater for large-scale cooling. Sizing a new plant is a high-stakes decision: the infrastructure is expensive and every design choice locks in decades of operating cost. AIRARO needed a way to design future systems from evidence rather than rules of thumb.</p></div>
-    <div class="block"><h4>My role &amp; approach</h4><p>Six months of full-time work as my Master thesis. Starting from operating data of a live SWAC plant, I built thermal and hydraulic models and validated them against the measured behaviour of the real installation. I then turned these models into a generic sizing tool that searches the design space and finds the best configuration for a given site.</p></div>
-
-    <figure class="fig fig-narrow"><img src="figures/SWAC.jpeg" alt="SWAC plant technical room"><figcaption>Technical room of a SWAC plant</figcaption></figure>
-
-    <div class="block"><h4>Engineering meets economics</h4><p>The tool does not stop at physics: it optimises while accounting for CAPEX and OPEX, so the output is not just a feasible design but a profitable one. It identified design changes <strong>improving COP by 25%</strong> and was integrated directly into the company's business plan.</p></div>
-
-    <div class="keyfig"><div class="big">COP +25%</div><div class="desc">coefficient of performance gain identified by the sizing tool</div></div>
-
-    <div class="block"><h4>Why it matters for robotics</h4><p>The exact loop a robotics team runs daily: measure the real system, build models you can trust, and let them drive design decisions under cost constraints.</p></div>
-  </section>
-
-  <!-- ===================== 03 BIOROB ===================== -->
-  <section id="biorob" class="project">
-    <div class="project-head">
-      <img class="project-logo" src="figures/biorob.png" alt="BioRob logo">
-      <div>
-        <span class="project-num">Project 03</span>
-        <h2 class="project-title">Compliant Feet for a Salamander Robot</h2>
-      </div>
-    </div>
-    <div class="project-meta"><span>BioRob Laboratory, EPFL — research project</span><span>Feb – Jul 2025</span></div>
-    <hr class="project-rule">
-
-    <div class="block"><h4>Context &amp; constraints</h4><p>Most quadruped robots use ball-joint feet and do not take advantage of complex ground contact. The goal: improve the locomotion efficiency of an existing salamander-like robot by introducing passive compliant feet, without modifying the rest of the platform.</p></div>
-    <div class="block"><h4>Design decisions &amp; why</h4><p>I designed compliant foot structures exploring the trade-off between stiffness and energy return, prototyped them, and characterised each candidate on a dedicated test bench before committing to integration on the robot. Bench data selected the final design.</p></div>
-
-    <div class="keyfig"><div class="big">+15% locomotion efficiency</div><div class="desc">measured on the robot after integration of the compliant feet</div></div>
-
-    <figure class="fig fig-narrow"><img src="figures/Final_design.png" alt="Salamander robot with compliant feet"><figcaption>Salamander robot with the compliant feet integrated</figcaption></figure>
-
-    <div class="video">
-      <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/v9D9Ljt6uQk" title="Robot locomotion with compliant feet" allowfullscreen loading="lazy"></iframe></div>
-      <p class="video-caption">Robot locomotion with compliant feet</p>
-    </div>
-
-    <div class="block"><h4>What I learned</h4><p>Bench data predicted the trend but not the exact gain — a reminder that final validation always belongs on the real robot. It also confirmed that compliance is a tuning problem: the right stiffness depends on the task, not on a fixed target.</p></div>
-  </section>
-
-  <!-- ===================== 04 RRL ===================== -->
-  <section id="rrl" class="project">
-    <div class="project-head">
-      <img class="project-logo" src="figures/rrl.png" alt="RRL logo">
-      <div>
-        <span class="project-num">Project 04</span>
-        <h2 class="project-title">Redesigning a 3-DOF Motion Platform to Carry a Human</h2>
-      </div>
-    </div>
-    <div class="project-meta"><span>Reconfigurable Robotics Laboratory, EPFL — research project</span><span>Sept 2024 – Feb 2025</span></div>
-    <hr class="project-rule">
-
-    <div class="block"><h4>Context &amp; constraints</h4><p>An existing 3-DOF motion platform had to be upgraded to sustain the weight of a human — a hard safety requirement — and then be driven by periodic locomotion extracted in real time from multimodal inputs for motion simulation.</p></div>
-    <div class="block"><h4>Structural redesign</h4><p>I reworked the structural design to carry a human safely: load cases, stiffness targets and safety factors defined upfront, then verified through analysis and physical testing before any person stepped on the platform.</p></div>
-    <div class="block"><h4>Motion extraction &amp; control</h4><p>On the software side, I implemented real-time extraction of periodic locomotion from a video input and used it to drive the platform, closing the loop from raw signals to physical motion.</p></div>
-
-    <div class="figrow">
-      <figure><img src="figures/New_design.png" alt="Motion platform reworked design"><figcaption>Motion platform with the reworked structural design</figcaption></figure>
-      <figure><img src="figures/pipeline.png" alt="Pipeline diagram"><figcaption>Pipeline: video input to motion platform via periodic extraction</figcaption></figure>
-    </div>
-
-    <div class="video">
-      <div class="video-frame short"><iframe src="https://www.youtube-nocookie.com/embed/DRUOvc0bIHY" title="Platform driven by extracted periodic locomotion" allowfullscreen loading="lazy"></iframe></div>
-      <p class="video-caption">Platform driven by extracted periodic locomotion</p>
-    </div>
-
-    <div class="block"><h4>What I learned</h4><p>Redesigning the platform's kinematics meant redesigning its control too, so I ended up as deep in the code as in the CAD. Building a periodic motion extractor from video and getting it to drive the new structure required combining mechanical design, kinematics and control in the same loop, not as separate steps.</p></div>
-  </section>
-
-  <!-- ===================== 05 IN-WHEEL MOTOR ===================== -->
-  <section id="motor" class="project">
-    <div class="project-head">
-      <img class="project-logo" src="figures/RT-logo.png" alt="EPFL Racing Team logo">
-      <div>
-        <span class="project-num">Project 05</span>
-        <h2 class="project-title">In-Wheel Motor &amp; Gearbox for a Formula Student Car</h2>
-      </div>
-    </div>
-    <div class="project-meta"><span>EPFL Racing Team</span><span>Feb 2022 – Aug 2023</span></div>
-    <hr class="project-rule">
-
-    <div class="block"><h4>Context &amp; constraints</h4><p>An in-wheel propulsion system is an integrated actuator: motor, gearbox, bearings, cooling and structure packed into a wheel, under hard constraints of unsprung mass, thermal load, packaging and racing regulations, delivered within a cross-functional team.</p></div>
-    <div class="block"><h4>My role &amp; design decisions</h4><p>I owned the design of the gearbox and the general integration of the complete wheel assembly. The gearbox had to deliver high torque density in a minimal volume: gear geometry, bearing arrangement and lubrication were traded off against mass and thermal limits. The same problem — compact high-torque-density transmission — is central to actuator design across robotics.</p></div>
-    <div class="block"><h4>Fabrication &amp; testing</h4><p>The assembly was fabricated and tested on the car, closing the loop from CAD to track.</p></div>
-
-    <div class="figrow">
-      <figure><img src="figures/eclatee_joliee.png" alt="Exploded CAD view of wheel assembly"><figcaption>Exploded CAD view of the wheel assembly</figcaption></figure>
-      <figure><img src="figures/LRT_RollOut.jpeg" alt="Final car"><figcaption>Final car integrating the wheel assembly, EPFL Racing Team</figcaption></figure>
-    </div>
-
-    <div class="block"><h4>What I learned</h4><p>Designing a subsystem is one thing; integrating it with parts built by other teams — powertrain, cooling, structure — is another: everything has to fit and work together with no single owner of the full picture. It also exposed the real gap between a CAD assembly that mates on screen and the same parts on a workbench, where manufacturing has the final word.</p></div>
-
-    <div class="linkbox"><span class="lbl">Learn more</span> &nbsp; EPFL Racing Team &nbsp; <a href="https://epflracingteam.ch" target="_blank" rel="noopener">epflracingteam.ch</a></div>
-  </section>
-
-  <!-- ===================== 06 ZF ===================== -->
-  <section id="zf" class="project">
-    <div class="project-head">
-      <img class="project-logo" src="figures/zf.png" alt="ZF Group logo">
-      <div>
-        <span class="project-num">Project 06</span>
-        <h2 class="project-title">Hardware Integration for a Battery Swap Station Optimiser</h2>
-      </div>
-    </div>
-    <div class="project-meta"><span>Collaboration with ZF Group</span><span>2024</span></div>
-    <hr class="project-rule">
-
-    <div class="block"><h4>The work</h4><p>The core of the project was a Python model of a battery swap station, running an optimisation algorithm over energy flows and battery capacities for a fleet of electric commercial vehicles (eTrucks, eBuses, eTrailers). To make the concept tangible, I built a reduced-scale physical model of the station that demonstrated the optimiser's decisions in hardware: energy flows and battery states visualised live as the algorithm ran. My role was the integration layer, translating the Python model's decisions into hardware behaviour through Arduino and electronics.</p></div>
-
-    <figure class="fig"><img src="figures/Battery.png" alt="Reduced-scale battery swap station model"><figcaption>Reduced-scale physical model of a battery swapping station — physical representation of the optimisation simulation outputs</figcaption></figure>
-  </section>
-
-  <!-- ===================== 07 GRIPPER ===================== -->
-  <section id="gripper" class="project">
-    <div class="project-head">
-      <div>
-        <span class="project-num">Project 07</span>
-        <h2 class="project-title">A Simple, Effective Gripper for a Robotic Arm</h2>
-      </div>
-    </div>
-    <div class="project-meta"><span>Personal project</span><span>Sept 2024 – Jan 2025</span></div>
-    <hr class="project-rule">
-
-    <div class="block"><h4>Context &amp; constraints</h4><p>Not every good design needs to be complex. The goal was a gripper for a robotic arm that grasps objects safely without crushing them, using a simple mechanical solution rather than active control.</p></div>
-    <div class="block"><h4>Design decisions &amp; why</h4><p>The gripper closes until a foam pad on each finger presses a button, so grip force is set by the mechanical design itself rather than by a control loop. No active force control, just a mechanical limit and a sensor telling it when to stop closing. Finger thickness and length were tuned to get the right bend under load, balancing compliance against grip strength. A separate force load sensor weighed the object while it was held. Simple, but it worked reliably.</p></div>
-
-    <figure class="fig fig-narrow"><img src="figures/gripper_proto.jpeg" alt="Gripper prototype"><figcaption>Functional gripper prototype</figcaption></figure>
-
-    <div class="block"><h4>What I learned</h4><p>Tuning finger thickness and length was mostly trial and error: each geometry change altered the bend under load, so the right stiffness came from testing physical iterations rather than picking values on paper. It also confirmed that a well-placed sensor can replace a control loop entirely — the foam and button did in hardware what a force sensor and control logic would have done in software, at a fraction of the complexity.</p></div>
-  </section>
-
-  <!-- ===================== 08 HULL CLEANER ===================== -->
-  <section id="hull" class="project">
-    <div class="project-head">
-      <div>
-        <span class="project-num">Project 08</span>
-        <h2 class="project-title">Autonomous Hull Cleaning Robot</h2>
-      </div>
-    </div>
-    <div class="project-meta"><span>Product development study, concept phase</span><span>Jan – Jun 2024</span></div>
-    <hr class="project-rule">
-
-    <div class="block"><h4>Context &amp; constraints</h4><p>A concept study for a mobile robot: an autonomous system to clean boat hulls. The project covered the full product development process, from user needs and requirements to candidate architectures, selection and detailed design.</p></div>
-    <div class="block"><h4>Architecture decisions</h4><p>The critical decisions centred on actuator selection and on making structural, hydraulic and electrical subsystems coexist — including both low-voltage and high-voltage electronics on the same platform. This was a prefeasibility study, not a build, but enough to expose how many disciplines a single robotic product has to reconcile before anything gets built.</p></div>
-
-    <figure class="fig fig-narrow"><img src="figures/Final_design_hull.jpg" alt="Hull cleaner final design render"><figcaption>Final design render</figcaption></figure>
-
-    <div class="block"><h4>What this project shows</h4><p>The discipline of early-stage product development: needs, requirements, trade-offs, justified selection — applied to a system where mechanical, hydraulic and electrical constraints all pull in different directions at once.</p></div>
-  </section>
-
-  <!-- ===================== SKILLS & CONTACT ===================== -->
-  <section id="contact">
-    <p class="section-eyebrow">Skills &amp; Contact</p>
-    <h2 class="section-title">What I work with</h2>
-    <div class="skills-grid">
-      <div class="skill"><h4>Robotics</h4><p>Kinematics and structural redesign of robotic platforms, closed-loop control, real-time motion extraction from video, compliant mechanism design, sensor integration and instrumentation (motion capture, multimodal inputs), embedded electronics and low-level hardware control (Arduino).</p></div>
-      <div class="skill"><h4>CAD &amp; Design</h4><p>SolidWorks, CATIA V5/V6, 3DEXPERIENCE, Fusion 360. Design for manufacturing and assembly (DFM/DFA).</p></div>
-      <div class="skill"><h4>Simulation &amp; Analysis</h4><p>Abaqus (static FEA), MATLAB, Python, C.</p></div>
-      <div class="skill"><h4>Prototyping &amp; Testing</h4><p>Hands-on fabrication, test-bench design, instrumentation and data acquisition, root-cause analysis, design iteration from measured results.</p></div>
-      <div class="skill"><h4>Project Management</h4><p>Site Manager &amp; Programmer of Festival Balélec (2023–2025), the largest open-air student festival in Europe: supplier coordination, logistics and decision-making under pressure.</p></div>
-    </div>
-
-    <div class="contact-card">
-      <h3>Sébastien Roux</h3>
-      <p>sebastienleonciniroux@gmail.com</p>
-      <p>+33 7 86 82 09 55</p>
-      <div class="links">
-        <a href="mailto:sebastienleonciniroux@gmail.com">Email</a>
-        <a href="https://linkedin.com/in/sebastien-roux-6102171a0/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </div>
-  </section>
-
-  </div><!-- /wrap -->
+  </main>
 
   <footer>© 2026 Sébastien Roux — Engineering Portfolio</footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
