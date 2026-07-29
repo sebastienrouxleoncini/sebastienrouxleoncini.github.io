@@ -46,7 +46,7 @@ a:hover { text-decoration: underline; }
 }
 
 .avatar-wrap {
-  width: 200px; height: 200px;
+  width: 280px; height: 280px;
   margin: 0 auto 1.3rem;
   border-radius: 50%;
   padding: 4px;
@@ -176,14 +176,20 @@ a:hover { text-decoration: underline; }
 /* ---------- Projects tab ---------- */
 .project-list { display: flex; flex-direction: column; gap: 2.2rem; }
 .project {
+  position: relative;
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 1.8rem 2rem 2.2rem;
 }
-.project-head { display: flex; align-items: center; gap: 1.1rem; margin-bottom: .3rem; }
+.project-head { display: flex; align-items: center; gap: 1.1rem; margin-bottom: .3rem; padding-right: 8rem; }
 .project-logo { width: 48px; height: 48px; object-fit: contain; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: .4rem; flex-shrink: 0; }
 .project-title { font-size: 1.35rem; font-weight: 700; margin: 0; line-height: 1.2; }
 .project-meta { color: var(--text-dim); font-size: .88rem; margin: .5rem 0 1.4rem; font-family: var(--mono); }
+.project-date {
+  position: absolute; top: 1.8rem; right: 2rem;
+  font-family: var(--mono); font-size: .76rem; color: var(--text-dim);
+  text-align: right; white-space: nowrap;
+}
 
 .project-text { color: var(--text-dim); margin: 0 0 1.2rem; }
 .project-text strong { color: var(--text); }
@@ -215,6 +221,8 @@ a:hover { text-decoration: underline; }
 .carousel-slide { flex: 0 0 100%; width: 100%; max-width: 100%; background: var(--bg); }
 .carousel-slide img { width: 100%; max-height: 520px; object-fit: contain; background: var(--bg); }
 .carousel-slide img.img-native { width: auto; max-width: 100%; margin: 0 auto; }
+.carousel-slide img.img-sm { width: auto; max-width: 380px; margin: 0 auto; }
+.carousel-slide img.img-md { width: auto; max-width: 460px; margin: 0 auto; }
 .carousel-slide .video-frame { position: relative; width: 100%; padding-top: 56.25%; background: #000; }
 .carousel-slide .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .carousel-slide .video-frame.portrait { padding-top: 0; height: 560px; max-width: 315px; margin: 0 auto; }
@@ -253,11 +261,13 @@ footer { text-align: center; color: var(--text-dim); font-size: .82rem; padding:
 
 /* ---------- Responsive ---------- */
 @media (max-width: 700px) {
-  .avatar-wrap { width: 150px; height: 150px; }
+  .avatar-wrap { width: 190px; height: 190px; }
   .timeline { margin-left: .5rem; padding-left: 2.2rem; }
   .timeline-logo { width: 2.9rem; height: 2.9rem; left: -2.2rem; }
   .tabs { gap: 0; }
   .tab-btn { padding: 1rem .8rem; font-size: .72rem; }
   .project { padding: 1.4rem 1.3rem 1.8rem; }
+  .project-head { padding-right: 0; flex-wrap: wrap; }
+  .project-date { position: static; display: block; margin-top: .4rem; text-align: left; }
   .project-title { font-size: 1.15rem; }
 }
