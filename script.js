@@ -70,7 +70,7 @@ function initCarousels() {
 
 // ---------- Language toggle (English default, French translations below) ----------
 const frText = {
-  'bio': "Salut, je suis Seb ! Je suis ingénieur mécanicien et j'aime construire des choses qui survivent au monde réel. Je passe mon temps libre dans ou sur l'océan, et à la montagne. N'hésite pas à me contacter si tu veux échanger !",
+  'bio': "Ingénieur mécanicien spécialisé en robotique et en conception de systèmes hardware. Je conduis les projets du concept initial jusqu'à la validation sur le terrain, en laissant les données réelles — plutôt que les hypothèses — trancher.",
   'tab-projects': "Projets",
 
   'cv-airaro-date': "Mars 2026 – Sept. 2026",
