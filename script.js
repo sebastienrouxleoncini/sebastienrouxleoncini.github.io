@@ -70,42 +70,42 @@ function initCarousels() {
 
 // ---------- Language toggle (English default, French translations below) ----------
 const frText = {
-  'bio': "Ingénieur mécanicien spécialisé en robotique et en conception de systèmes hardware. Je conduis les projets du concept initial jusqu'à la validation sur le terrain, en laissant les données réelles — plutôt que les hypothèses — trancher.",
+  'bio': "Bonjour, moi c'est Sébastien ! Ingénieur mécanicien, je suis passionné par la conception de systèmes, leur mise à l'épreuve et leur amélioration continue. De la robotique aux systèmes énergétiques renouvelables, je suis toujours curieux de contribuer à faire avancer le monde. N'hésitez pas à me contacter si vous souhaitez échanger !",
   'tab-projects': "Projets",
 
   'cv-airaro-date': "Mars 2026 – Sept. 2026",
-  'cv-airaro-title': "Ingénieur R&D",
-  'cv-airaro-org': "AIRARO SAS — Projet de Master",
-  'cv-airaro-desc': "A construit un outil de dimensionnement à partir de données réelles d'une centrale SWAC, combinant modélisation thermique, hydraulique et économique. A identifié des améliorations augmentant le COP de 25%.",
+  'cv-airaro-title': "Ingénieur en R&D",
+  'cv-airaro-org': "AIRARO SAS — Travail de Master",
+  'cv-airaro-desc': "Conception d'un outil de dimensionnement à partir de données réelles d'une centrale SWAC, combinant modélisation thermique, hydraulique et économique. Mise en évidence de leviers d'amélioration portant le COP à +25 %.",
 
   'cv-odewa-date': "Sept. 2025 – Fév. 2026",
-  'cv-odewa-title': "Ingénieur R&D",
+  'cv-odewa-title': "Ingénieur en R&D",
   'cv-odewa-org': "ODEWA — Polynésie française",
-  'cv-odewa-desc': "Responsable du cycle complet d'une machine automatisée d'extraction de déchets sous-marins : cahier des charges, CAO, FEA, fabrication et validation sur le terrain. 1 tonne extraite en 2 jours sur site.",
+  'cv-odewa-desc': "Responsable du cycle complet d'une machine automatisée d'extraction de déchets sous-marins : cahier des charges, conception CAO, dimensionnement par éléments finis, fabrication et validation sur le terrain. 1 tonne de déchets extraite en 2 jours sur site.",
 
   'cv-biorob-date': "Fév. 2025 – Juil. 2025",
   'cv-biorob-title': "Pieds biomimétiques compliants",
   'cv-biorob-org': "BioRob Lab, EPFL",
-  'cv-biorob-desc': "Conception et test en banc d'essai de pieds compliants pour un robot salamandre ; intégrés et validés par capture de mouvement — +15% d'efficacité de locomotion.",
+  'cv-biorob-desc': "Conception et caractérisation, en banc d'essai, de pieds compliants pour un robot salamandre ; intégration sur le robot et validation par capture de mouvement — gain de 15 % en efficacité de locomotion.",
 
   'cv-rrl-date': "Sept. 2024 – Fév. 2025",
   'cv-rrl-title': "Plateforme robotique à 3 degrés de liberté",
   'cv-rrl-org': "Reconfigurable Robotics Lab, EPFL",
-  'cv-rrl-desc': "Redessiné la structure de la plateforme pour porter un humain ; développé un pipeline temps réel vidéo-vers-mouvement pour la piloter.",
+  'cv-rrl-desc': "Refonte de la structure de la plateforme pour supporter le poids d'un humain, et développement d'un pipeline temps réel extrayant la locomotion d'une vidéo pour piloter la plateforme.",
 
   'cv-zf-date': "Sept. 2023 – Mars 2024",
   'cv-zf-title': "Optimisation du stockage d'énergie",
   'cv-zf-org': "Collaboration avec ZF Group",
-  'cv-zf-desc': "Démonstrateur physique à échelle réduite avec électronique Arduino pour une station d'échange de batteries, complété par une étude de modèle économique.",
+  'cv-zf-desc': "Démonstrateur physique à échelle réduite, intégrant de l'électronique Arduino, pour une station d'échange de batteries — complété par une étude de modèle économique.",
 
   'cv-master-date': "2023 – 2026",
   'cv-master-title': "Master en génie mécanique",
-  'cv-master-org': "EPFL — Design & Production, mineur en Management de la Technologie et Entrepreneuriat",
+  'cv-master-org': "EPFL — spécialisation Conception et Production, mineur Management de la Technologie et Entrepreneuriat",
 
   'cv-racing-date': "Fév. 2022 – Août 2023",
   'cv-racing-title': "Propulsion électrique in-wheel",
   'cv-racing-org': "EPFL Racing Team — Formula Student",
-  'cv-racing-desc': "Conception et optimisation d'une boîte de vitesses in-wheel sous fortes contraintes thermiques, de masse et réglementaires, du concept jusqu'à la voiture de course.",
+  'cv-racing-desc': "Conception et optimisation d'une boîte de vitesses in-wheel sous fortes contraintes thermiques, massiques et réglementaires, du concept jusqu'à la voiture de course.",
 
   'cv-bachelor-date': "2019 – 2023",
   'cv-bachelor-title': "Bachelor en génie mécanique",
@@ -114,29 +114,29 @@ const frText = {
   'lang-value': "Français (natif, C2), Anglais (courant, C2)",
 
   'odewa-date': "Sept. 2025 – Fév. 2026",
-  'odewa-title': "Une machine d'extraction fonctionnelle en 6 mois",
+  'odewa-title': "Une machine d'extraction opérationnelle en 6 mois",
   'odewa-meta': "ODEWA — Stage d'ingénierie R&D, Polynésie française",
-  'odewa-text': "Conception, fabrication et test sur le terrain d'une machine automatisée d'extraction de déchets, déployée sur une ferme perlière en Polynésie française — seul ingénieur du cahier des charges à la CAO, au dimensionnement structurel, à la fabrication et à la validation in situ, en six mois. Les données du premier prototype guident aujourd'hui une machine de seconde génération.",
+  'odewa-text': "Conception, fabrication et validation sur le terrain d'une machine automatisée d'extraction de déchets sous-marins, déployée sur une ferme perlière en Polynésie française. Seul ingénieur sur ce projet, du cahier des charges jusqu'à la validation in situ, en passant par la CAO, le dimensionnement structurel et la fabrication — le tout en six mois. Les données recueillies sur ce premier prototype orientent aujourd'hui la conception d'une seconde génération de la machine.",
   'odewa-keyfig-big': "1 tonne en 2 jours",
-  'odewa-keyfig-desc': "de déchets sous-marins extraits et nettoyés durant la validation sur le terrain",
+  'odewa-keyfig-desc': "de déchets sous-marins récoltés et nettoyés lors des essais sur le terrain",
 
   'airaro-date': "Mars 2026 – Sept. 2026",
-  'airaro-title': "Un outil de dimensionnement construit à partir de données réelles",
-  'airaro-meta': "AIRARO SAS — Projet de Master, stage d'ingénierie R&D",
-  'airaro-text': "Analyse des données d'exploitation en temps réel d'une centrale SWAC et développement d'un outil de dimensionnement thermique, hydraulique et économique pour guider la conception de futures installations, aujourd'hui intégré au business plan de l'entreprise.",
-  'airaro-keyfig-desc': "gain de coefficient de performance identifié par l'outil de dimensionnement",
+  'airaro-title': "Un outil de dimensionnement conçu à partir de données réelles",
+  'airaro-meta': "AIRARO SAS — Travail de Master en R&D",
+  'airaro-text': "Analyse de données d'exploitation réelles d'une centrale SWAC et développement d'un outil de dimensionnement thermique, hydraulique et économique pour guider la conception des futures installations — aujourd'hui intégré au plan d'affaires de l'entreprise.",
+  'airaro-keyfig-desc': "gain de performance (COP) identifié grâce à l'outil de dimensionnement",
 
   'biorob-date': "Fév. 2025 – Juil. 2025",
   'biorob-title': "Pieds compliants pour un robot salamandre",
   'biorob-meta': "BioRob Laboratory, EPFL — projet de recherche",
-  'biorob-text': "Conception et test en banc d'essai de pieds compliants pour un robot de type salamandre, puis intégration et validation sur la plateforme par capture de mouvement.",
-  'biorob-keyfig-big': "+15% d'efficacité de locomotion",
+  'biorob-text': "Conception et caractérisation, en banc d'essai, de pieds compliants pour un robot de type salamandre, puis intégration sur la plateforme et validation par capture de mouvement.",
+  'biorob-keyfig-big': "+15 % d'efficacité de locomotion",
   'biorob-keyfig-desc': "mesuré sur le robot après intégration des pieds compliants",
 
   'rrl-date': "Sept. 2024 – Fév. 2025",
-  'rrl-title': "Repenser une plateforme à 3 degrés de liberté pour porter un humain",
+  'rrl-title': "Refonte d'une plateforme à 3 degrés de liberté pour porter un humain",
   'rrl-meta': "Reconfigurable Robotics Laboratory, EPFL — projet de recherche",
-  'rrl-text': "Redessiné la structure d'une plateforme à 3 degrés de liberté pour porter un humain en toute sécurité, et développé un pipeline temps réel qui extrait la locomotion depuis une vidéo pour la piloter.",
+  'rrl-text': "Refonte de la structure d'une plateforme à 3 degrés de liberté pour porter un humain en toute sécurité, associée au développement d'un pipeline temps réel extrayant la locomotion d'une vidéo pour piloter la plateforme.",
 
   'zf-date': "Sept. 2023 – Mars 2024",
   'zf-title': "Intégration matérielle pour un optimiseur de station d'échange de batteries",
@@ -151,15 +151,15 @@ const frText = {
   'gripper-date': "Sept. 2024 – Janv. 2025",
   'gripper-title': "Une pince simple et efficace pour un bras robotique",
   'gripper-meta': "Projet personnel",
-  'gripper-text': "Construction d'une pince qui fixe la force de préhension mécaniquement plutôt que par un contrôle actif, avec un capteur pour peser ce qu'elle tient.",
+  'gripper-text': "Conception d'une pince dont la force de préhension est fixée mécaniquement plutôt que par un contrôle actif, complétée par un capteur qui pèse l'objet saisi.",
 
   'hull-date': "Janv. 2024 – Juin 2024",
   'hull-title': "Robot autonome de nettoyage de coque",
-  'hull-meta': "Étude de développement produit, phase concept",
+  'hull-meta': "Étude de développement produit, phase avant-projet",
   'hull-text': "Étude de concept pour un robot autonome de nettoyage de coques de bateaux, des besoins utilisateurs jusqu'au choix d'architecture et à la conception détaillée.",
 
   'contact-eyebrow': "Me contacter",
-  'contact-title': "Construisons quelque chose qui survit au contact de la réalité",
+  'contact-title': "Construisons ensemble quelque chose qui tient la route",
   'footer-sub': "Portfolio d'ingénierie",
 };
 
