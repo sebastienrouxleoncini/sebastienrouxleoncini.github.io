@@ -35,6 +35,17 @@ a:hover { text-decoration: underline; }
 
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 1.5rem; }
 
+/* ---------- Language toggle ---------- */
+.lang-toggle {
+  position: fixed; top: 1.1rem; right: 1.3rem; z-index: 200;
+  font-family: var(--mono); font-size: .78rem; font-weight: 600;
+  letter-spacing: .06em;
+  background: var(--bg); color: var(--text);
+  border: 1px solid var(--border); border-radius: 20px;
+  padding: .45rem .9rem; cursor: pointer;
+}
+.lang-toggle:hover { border-color: var(--accent); color: var(--accent); }
+
 /* ---------- Persistent top: profile + tabs ---------- */
 .topbar {
   border-bottom: 1px solid var(--border);
@@ -217,16 +228,19 @@ a:hover { text-decoration: underline; }
 
 /* ---------- Carousel ---------- */
 .carousel { position: relative; margin: 1.4rem 0; border-radius: 10px; overflow: hidden; background: var(--bg); border: 1px solid var(--border); }
-.carousel-track { display: flex; width: 100%; transition: transform .4s ease; }
-.carousel-slide { flex: 0 0 100%; width: 100%; max-width: 100%; background: var(--bg); }
-.carousel-slide img { width: 100%; max-height: 520px; object-fit: contain; background: var(--bg); }
-.carousel-slide img.img-native { width: auto; max-width: 100%; margin: 0 auto; }
-.carousel-slide img.img-sm { width: auto; max-width: 380px; margin: 0 auto; }
-.carousel-slide img.img-md { width: auto; max-width: 460px; margin: 0 auto; }
+.carousel-track { display: flex; width: 100%; transition: transform .4s ease; align-items: stretch; }
+.carousel-slide {
+  flex: 0 0 100%; width: 100%; max-width: 100%; background: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  min-height: 320px;
+}
+.carousel-slide img { width: 100%; max-height: 520px; object-fit: contain; background: var(--bg); margin: 0 auto; }
+.carousel-slide img.img-native { width: auto; max-width: 100%; }
+.carousel-slide img.img-sm { width: auto; max-width: 380px; }
+.carousel-slide img.img-md { width: auto; max-width: 460px; }
 .carousel-slide .video-frame { position: relative; width: 100%; padding-top: 56.25%; background: #000; }
 .carousel-slide .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .carousel-slide .video-frame.portrait { padding-top: 0; height: 560px; max-width: 315px; margin: 0 auto; }
-.carousel-cap { text-align: center; color: var(--text-dim); font-size: .85rem; padding: .7rem 1rem; margin: 0; border-top: 1px solid var(--border); }
 
 .car-btn {
   position: absolute; top: 50%; transform: translateY(-50%);

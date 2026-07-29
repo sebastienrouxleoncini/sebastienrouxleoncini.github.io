@@ -12,6 +12,8 @@
 </head>
 <body>
 
+  <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">FR</button>
+
   <!-- ===================== PERSISTENT TOP: PROFILE + TABS ===================== -->
   <header class="topbar">
     <div class="profile">
@@ -19,11 +21,11 @@
         <img class="avatar" src="figures/profile.jpg" alt="Sébastien Roux">
       </div>
       <h1>Sébastien Roux</h1>
-      <p class="tagline">Hey, I'm Seb! I'm a mechanical engineer who loves building things that survive the real world. I spend my free time either in or on the ocean and in the mountains. Don't hesitate to connect if you want to discuss!</p>
+      <p class="tagline" data-i18n="bio">Hey, I'm Seb! I'm a mechanical engineer who loves building things that survive the real world. I spend my free time either in or on the ocean and in the mountains. Don't hesitate to connect if you want to discuss!</p>
     </div>
     <nav class="tabs" role="tablist">
       <button class="tab-btn active" data-tab="cv">CV</button>
-      <button class="tab-btn" data-tab="projects">Projects</button>
+      <button class="tab-btn" data-tab="projects" data-i18n="tab-projects">Projects</button>
       <button class="tab-btn" data-tab="contact">Contact</button>
     </nav>
   </header>
@@ -39,84 +41,84 @@
         <li class="timeline-item">
           <span class="timeline-logo"><img src="figures/airaro.png" alt="AIRARO"></span>
           <div class="timeline-body">
-            <p class="timeline-date">Mar 2026 – Sept 2026</p>
-            <h3 class="timeline-title">R&amp;D Engineering Intern</h3>
-            <p class="timeline-org">AIRARO SAS — Master Thesis</p>
-            <p class="timeline-desc">Built a sizing tool from live SWAC plant data, combining thermal, hydraulic and economic modelling. Identified design changes improving COP by 25%.</p>
+            <p class="timeline-date" data-i18n="cv-airaro-date">Mar 2026 – Sept 2026</p>
+            <h3 class="timeline-title" data-i18n="cv-airaro-title">R&amp;D Engineering Intern</h3>
+            <p class="timeline-org" data-i18n="cv-airaro-org">AIRARO SAS — Master Thesis</p>
+            <p class="timeline-desc" data-i18n="cv-airaro-desc">Built a sizing tool from live SWAC plant data, combining thermal, hydraulic and economic modelling. Identified design changes improving COP by 25%.</p>
           </div>
         </li>
 
         <li class="timeline-item">
           <span class="timeline-logo"><img src="figures/odewa.png" alt="ODEWA"></span>
           <div class="timeline-body">
-            <p class="timeline-date">Sept 2025 – Feb 2026</p>
-            <h3 class="timeline-title">R&amp;D Engineering Intern</h3>
-            <p class="timeline-org">ODEWA — French Polynesia</p>
-            <p class="timeline-desc">Owned the full lifecycle of an automated underwater waste-extraction machine: specs, CAD, FEA, fabrication and field validation. 1 tonne extracted in 2 days on site.</p>
+            <p class="timeline-date" data-i18n="cv-odewa-date">Sept 2025 – Feb 2026</p>
+            <h3 class="timeline-title" data-i18n="cv-odewa-title">R&amp;D Engineering Intern</h3>
+            <p class="timeline-org" data-i18n="cv-odewa-org">ODEWA — French Polynesia</p>
+            <p class="timeline-desc" data-i18n="cv-odewa-desc">Owned the full lifecycle of an automated underwater waste-extraction machine: specs, CAD, FEA, fabrication and field validation. 1 tonne extracted in 2 days on site.</p>
           </div>
         </li>
 
         <li class="timeline-item">
           <span class="timeline-logo"><img src="figures/biorob.png" alt="BioRob Lab"></span>
           <div class="timeline-body">
-            <p class="timeline-date">Feb 2025 – Jul 2025</p>
-            <h3 class="timeline-title">Compliant Biomimetic Feet</h3>
-            <p class="timeline-org">BioRob Lab, EPFL</p>
-            <p class="timeline-desc">Designed and bench-tested compliant feet for a salamander robot; integrated and validated with motion capture — +15% locomotion efficiency.</p>
+            <p class="timeline-date" data-i18n="cv-biorob-date">Feb 2025 – Jul 2025</p>
+            <h3 class="timeline-title" data-i18n="cv-biorob-title">Compliant Biomimetic Feet</h3>
+            <p class="timeline-org" data-i18n="cv-biorob-org">BioRob Lab, EPFL</p>
+            <p class="timeline-desc" data-i18n="cv-biorob-desc">Designed and bench-tested compliant feet for a salamander robot; integrated and validated with motion capture — +15% locomotion efficiency.</p>
           </div>
         </li>
 
         <li class="timeline-item">
           <span class="timeline-logo"><img src="figures/rrl.png" alt="Reconfigurable Robotics Lab"></span>
           <div class="timeline-body">
-            <p class="timeline-date">Sept 2024 – Feb 2025</p>
-            <h3 class="timeline-title">3-DOF Robotic Platform</h3>
-            <p class="timeline-org">Reconfigurable Robotics Lab, EPFL</p>
-            <p class="timeline-desc">Redesigned the platform structure to carry a human; built a real-time video-to-motion pipeline to drive it.</p>
+            <p class="timeline-date" data-i18n="cv-rrl-date">Sept 2024 – Feb 2025</p>
+            <h3 class="timeline-title" data-i18n="cv-rrl-title">3-DOF Robotic Platform</h3>
+            <p class="timeline-org" data-i18n="cv-rrl-org">Reconfigurable Robotics Lab, EPFL</p>
+            <p class="timeline-desc" data-i18n="cv-rrl-desc">Redesigned the platform structure to carry a human; built a real-time video-to-motion pipeline to drive it.</p>
           </div>
         </li>
 
         <li class="timeline-item">
           <span class="timeline-logo"><img src="figures/zf.png" alt="ZF Group"></span>
           <div class="timeline-body">
-            <p class="timeline-date">Sept 2023 – Mar 2024</p>
-            <h3 class="timeline-title">Energy Storage Optimization</h3>
-            <p class="timeline-org">Collaboration with ZF Group</p>
-            <p class="timeline-desc">Reduced-scale physical demonstrator with Arduino-integrated hardware for a battery-swap station, plus a business model study.</p>
+            <p class="timeline-date" data-i18n="cv-zf-date">Sept 2023 – Mar 2024</p>
+            <h3 class="timeline-title" data-i18n="cv-zf-title">Energy Storage Optimization</h3>
+            <p class="timeline-org" data-i18n="cv-zf-org">Collaboration with ZF Group</p>
+            <p class="timeline-desc" data-i18n="cv-zf-desc">Reduced-scale physical demonstrator with Arduino-integrated hardware for a battery-swap station, plus a business model study.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <span class="timeline-logo"><img src="figures/logo-epfl.png" alt="EPFL"></span>
+          <div class="timeline-body">
+            <p class="timeline-date" data-i18n="cv-master-date">2023 – 2026</p>
+            <h3 class="timeline-title" data-i18n="cv-master-title">Master in Mechanical Engineering</h3>
+            <p class="timeline-org" data-i18n="cv-master-org">EPFL — Design &amp; Production, minor in Management &amp; Technology of Entrepreneurship</p>
           </div>
         </li>
 
         <li class="timeline-item">
           <span class="timeline-logo"><img src="figures/RT-logo.png" alt="EPFL Racing Team"></span>
           <div class="timeline-body">
-            <p class="timeline-date">Feb 2022 – Aug 2023</p>
-            <h3 class="timeline-title">In-Wheel Electric Propulsion</h3>
-            <p class="timeline-org">EPFL Racing Team — Formula Student</p>
-            <p class="timeline-desc">Designed and optimised an in-wheel gearbox under tight thermal, mass and regulatory constraints, from concept to a raced vehicle.</p>
+            <p class="timeline-date" data-i18n="cv-racing-date">Feb 2022 – Aug 2023</p>
+            <h3 class="timeline-title" data-i18n="cv-racing-title">In-Wheel Electric Propulsion</h3>
+            <p class="timeline-org" data-i18n="cv-racing-org">EPFL Racing Team — Formula Student</p>
+            <p class="timeline-desc" data-i18n="cv-racing-desc">Designed and optimised an in-wheel gearbox under tight thermal, mass and regulatory constraints, from concept to a raced vehicle.</p>
           </div>
         </li>
 
         <li class="timeline-item">
           <span class="timeline-logo"><img src="figures/logo-epfl.png" alt="EPFL"></span>
           <div class="timeline-body">
-            <p class="timeline-date">2023 – 2026</p>
-            <h3 class="timeline-title">Master in Mechanical Engineering</h3>
-            <p class="timeline-org">EPFL — Design &amp; Production, minor in Management &amp; Technology of Entrepreneurship</p>
-          </div>
-        </li>
-
-        <li class="timeline-item">
-          <span class="timeline-logo"><img src="figures/logo-epfl.png" alt="EPFL"></span>
-          <div class="timeline-body">
-            <p class="timeline-date">2019 – 2023</p>
-            <h3 class="timeline-title">Bachelor in Mechanical Engineering</h3>
+            <p class="timeline-date" data-i18n="cv-bachelor-date">2019 – 2023</p>
+            <h3 class="timeline-title" data-i18n="cv-bachelor-title">Bachelor in Mechanical Engineering</h3>
             <p class="timeline-org">EPFL</p>
           </div>
         </li>
 
       </ol>
 
-      <p class="languages"><strong>Languages —</strong> French (native, C2), English (fluent, C2)</p>
+      <p class="languages"><strong data-i18n="lang-label">Languages —</strong> <span data-i18n="lang-value">French (native, C2), English (fluent, C2)</span></p>
     </section>
 
     <!-- ===================== PROJECTS TAB ===================== -->
@@ -125,28 +127,28 @@
 
         <!-- ODEWA -->
         <div class="project" id="odewa">
-          <div class="project-date">Sept 2025 – Feb 2026</div>
+          <div class="project-date" data-i18n="odewa-date">Sept 2025 – Feb 2026</div>
           <div class="project-head">
             <img class="project-logo" src="figures/odewa.png" alt="ODEWA logo">
-            <h3 class="project-title">A Functional Extraction Machine in 6 Months</h3>
+            <h3 class="project-title" data-i18n="odewa-title">A Functional Extraction Machine in 6 Months</h3>
           </div>
-          <div class="project-meta">ODEWA — R&amp;D Engineering Internship, French Polynesia</div>
+          <div class="project-meta" data-i18n="odewa-meta">ODEWA — R&amp;D Engineering Internship, French Polynesia</div>
 
           <div class="carousel" data-carousel>
             <div class="carousel-track">
-              <div class="carousel-slide"><img src="figures/odewa_test.png" alt="Prototype deployed in lagoon"><p class="carousel-cap">Deployed for 4 days of testing in the lagoon of Takaroa</p></div>
-              <div class="carousel-slide"><img src="figures/Proto1_odewa.jpeg" alt="First prototype fabricated"><p class="carousel-cap">First prototype fabricated and assembled</p></div>
-              <div class="carousel-slide"><img class="img-md" src="figures/CAD_Odewa.png" alt="CAD render of first prototype"><p class="carousel-cap">CAD render of the first prototype</p></div>
-              <div class="carousel-slide"><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/v9D9Ljt6uQk" title="ODEWA prototype in action" allowfullscreen loading="lazy"></iframe></div><p class="carousel-cap">Prototype 1 in action during field tests</p></div>
+              <div class="carousel-slide"><img src="figures/odewa_test.png" alt="Prototype deployed in lagoon"></div>
+              <div class="carousel-slide"><img src="figures/Proto1_odewa.jpeg" alt="First prototype fabricated"></div>
+              <div class="carousel-slide"><img class="img-md" src="figures/CAD_Odewa.png" alt="CAD render of first prototype"></div>
+              <div class="carousel-slide"><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/v9D9Ljt6uQk" title="ODEWA prototype in action" allowfullscreen loading="lazy"></iframe></div></div>
             </div>
             <button class="car-btn prev" aria-label="Previous">‹</button>
             <button class="car-btn next" aria-label="Next">›</button>
             <div class="car-dots"></div>
           </div>
 
-          <p class="project-text">Designed, built and field-tested an automated waste-extraction machine deployed on a pearl farm in French Polynesia — sole engineer from first specifications through CAD, structural sizing, fabrication and in-situ validation, in six months. Field data from the first prototype is now driving a second-generation design.</p>
+          <p class="project-text" data-i18n="odewa-text">Designed, built and field-tested an automated waste-extraction machine deployed on a pearl farm in French Polynesia — sole engineer from first specifications through CAD, structural sizing, fabrication and in-situ validation, in six months. Field data from the first prototype is now driving a second-generation design.</p>
 
-          <div class="keyfig"><div class="big">1 tonne in 2 days</div><div class="desc">of underwater waste extracted and cleaned during field validation</div></div>
+          <div class="keyfig"><div class="big" data-i18n="odewa-keyfig-big">1 tonne in 2 days</div><div class="desc" data-i18n="odewa-keyfig-desc">of underwater waste extracted and cleaned during field validation</div></div>
 
           <ul class="tag-list">
             <li>CATIA</li><li>Structural FEA (Abaqus)</li><li>Field Testing</li><li>Concept-to-Prototype</li>
@@ -155,27 +157,27 @@
 
         <!-- AIRARO -->
         <div class="project" id="airaro">
-          <div class="project-date">Mar 2026 – Sept 2026</div>
+          <div class="project-date" data-i18n="airaro-date">Mar 2026 – Sept 2026</div>
           <div class="project-head">
             <img class="project-logo" src="figures/airaro.png" alt="AIRARO logo">
-            <h3 class="project-title">A Sizing Tool Built from Live Plant Data</h3>
+            <h3 class="project-title" data-i18n="airaro-title">A Sizing Tool Built from Live Plant Data</h3>
           </div>
-          <div class="project-meta">AIRARO SAS — Master Thesis, R&amp;D Engineering Internship</div>
+          <div class="project-meta" data-i18n="airaro-meta">AIRARO SAS — Master Thesis, R&amp;D Engineering Internship</div>
 
           <div class="carousel" data-carousel>
             <div class="carousel-track">
-              <div class="carousel-slide"><img src="figures/SWAC.jpeg" alt="SWAC plant technical room"><p class="carousel-cap">Technical room of a SWAC plant</p></div>
-              <div class="carousel-slide"><img src="figures/swac.jpg" alt="Diagram of how a SWAC system works"><p class="carousel-cap">How a SWAC system works</p></div>
-              <div class="carousel-slide"><img src="figures/la-clim-venue-grand-bleu.jpg" alt="Boat pulling the marine pipe during installation"><p class="carousel-cap">Pulling the marine pipe into place during installation</p></div>
+              <div class="carousel-slide"><img src="figures/la-clim-venue-grand-bleu.jpg" alt="Boat pulling the marine pipe during installation"></div>
+              <div class="carousel-slide"><img src="figures/swac.jpg" alt="Diagram of how a SWAC system works"></div>
+              <div class="carousel-slide"><img src="figures/SWAC.jpeg" alt="SWAC plant technical room"></div>
             </div>
             <button class="car-btn prev" aria-label="Previous">‹</button>
             <button class="car-btn next" aria-label="Next">›</button>
             <div class="car-dots"></div>
           </div>
 
-          <p class="project-text">Analyzed live operating data from a SWAC cooling plant and built a thermal, hydraulic and economic sizing tool to guide future plant design, now part of the company's business plan.</p>
+          <p class="project-text" data-i18n="airaro-text">Analyzed live operating data from a SWAC cooling plant and built a thermal, hydraulic and economic sizing tool to guide future plant design, now part of the company's business plan.</p>
 
-          <div class="keyfig"><div class="big">COP +25%</div><div class="desc">coefficient of performance gain identified by the sizing tool</div></div>
+          <div class="keyfig"><div class="big">COP +25%</div><div class="desc" data-i18n="airaro-keyfig-desc">coefficient of performance gain identified by the sizing tool</div></div>
 
           <ul class="tag-list">
             <li>Python</li><li>MATLAB</li><li>Thermal &amp; Hydraulic Modeling</li><li>Techno-Economic Analysis</li>
@@ -184,26 +186,26 @@
 
         <!-- BIOROB -->
         <div class="project" id="biorob">
-          <div class="project-date">Feb 2025 – Jul 2025</div>
+          <div class="project-date" data-i18n="biorob-date">Feb 2025 – Jul 2025</div>
           <div class="project-head">
             <img class="project-logo" src="figures/biorob.png" alt="BioRob logo">
-            <h3 class="project-title">Compliant Feet for a Salamander Robot</h3>
+            <h3 class="project-title" data-i18n="biorob-title">Compliant Feet for a Salamander Robot</h3>
           </div>
-          <div class="project-meta">BioRob Laboratory, EPFL — research project</div>
+          <div class="project-meta" data-i18n="biorob-meta">BioRob Laboratory, EPFL — research project</div>
 
           <div class="carousel" data-carousel>
             <div class="carousel-track">
-              <div class="carousel-slide"><img src="figures/Final_design.png" alt="Salamander robot with compliant feet"><p class="carousel-cap">Salamander robot with the compliant feet integrated</p></div>
-              <div class="carousel-slide"><div class="video-frame portrait"><iframe src="https://www.youtube-nocookie.com/embed/XyNmVeLNrOs" title="Pleurobot locomotion with compliant feet" allowfullscreen loading="lazy"></iframe></div><p class="carousel-cap">Pleurobot locomotion with the compliant feet</p></div>
+              <div class="carousel-slide"><img src="figures/Final_design.png" alt="Salamander robot with compliant feet"></div>
+              <div class="carousel-slide"><div class="video-frame portrait"><iframe src="https://www.youtube-nocookie.com/embed/XyNmVeLNrOs" title="Pleurobot locomotion with compliant feet" allowfullscreen loading="lazy"></iframe></div></div>
             </div>
             <button class="car-btn prev" aria-label="Previous">‹</button>
             <button class="car-btn next" aria-label="Next">›</button>
             <div class="car-dots"></div>
           </div>
 
-          <p class="project-text">Designed and bench-tested compliant feet for a salamander-like robot, then integrated and validated them on the platform with motion capture.</p>
+          <p class="project-text" data-i18n="biorob-text">Designed and bench-tested compliant feet for a salamander-like robot, then integrated and validated them on the platform with motion capture.</p>
 
-          <div class="keyfig"><div class="big">+15% locomotion efficiency</div><div class="desc">measured on the robot after integration of the compliant feet</div></div>
+          <div class="keyfig"><div class="big" data-i18n="biorob-keyfig-big">+15% locomotion efficiency</div><div class="desc" data-i18n="biorob-keyfig-desc">measured on the robot after integration of the compliant feet</div></div>
 
           <ul class="tag-list">
             <li>Compliant Mechanism Design</li><li>3D Printing</li><li>Test Bench Design</li><li>Motion Capture</li>
@@ -212,24 +214,24 @@
 
         <!-- RRL -->
         <div class="project" id="rrl">
-          <div class="project-date">Sept 2024 – Feb 2025</div>
+          <div class="project-date" data-i18n="rrl-date">Sept 2024 – Feb 2025</div>
           <div class="project-head">
             <img class="project-logo" src="figures/rrl.png" alt="RRL logo">
-            <h3 class="project-title">Redesigning a 3-DOF Motion Platform to Carry a Human</h3>
+            <h3 class="project-title" data-i18n="rrl-title">Redesigning a 3-DOF Motion Platform to Carry a Human</h3>
           </div>
-          <div class="project-meta">Reconfigurable Robotics Laboratory, EPFL — research project</div>
+          <div class="project-meta" data-i18n="rrl-meta">Reconfigurable Robotics Laboratory, EPFL — research project</div>
 
           <div class="carousel" data-carousel>
             <div class="carousel-track">
-              <div class="carousel-slide"><img class="img-sm" src="figures/New_design.png" alt="Motion platform reworked design"><p class="carousel-cap">Motion platform with the reworked structural design</p></div>
-              <div class="carousel-slide"><div class="video-frame portrait"><iframe src="https://www.youtube-nocookie.com/embed/DRUOvc0bIHY" title="Platform driven by extracted periodic locomotion" allowfullscreen loading="lazy"></iframe></div><p class="carousel-cap">Platform driven by extracted periodic locomotion</p></div>
+              <div class="carousel-slide"><img class="img-sm" src="figures/New_design.png" alt="Motion platform reworked design"></div>
+              <div class="carousel-slide"><div class="video-frame portrait"><iframe src="https://www.youtube-nocookie.com/embed/DRUOvc0bIHY" title="Platform driven by extracted periodic locomotion" allowfullscreen loading="lazy"></iframe></div></div>
             </div>
             <button class="car-btn prev" aria-label="Previous">‹</button>
             <button class="car-btn next" aria-label="Next">›</button>
             <div class="car-dots"></div>
           </div>
 
-          <p class="project-text">Reworked the structure of a 3-DOF motion platform to safely carry a person, and built a real-time pipeline that extracts locomotion from video to drive it.</p>
+          <p class="project-text" data-i18n="rrl-text">Reworked the structure of a 3-DOF motion platform to safely carry a person, and built a real-time pipeline that extracts locomotion from video to drive it.</p>
 
           <ul class="tag-list">
             <li>SolidWorks</li><li>FEA</li><li>Python / MATLAB</li><li>Real-Time Video Processing</li>
@@ -238,23 +240,23 @@
 
         <!-- ZF -->
         <div class="project" id="zf">
-          <div class="project-date">Sept 2023 – Mar 2024</div>
+          <div class="project-date" data-i18n="zf-date">Sept 2023 – Mar 2024</div>
           <div class="project-head">
             <img class="project-logo" src="figures/zf.png" alt="ZF Group logo">
-            <h3 class="project-title">Hardware Integration for a Battery Swap Station Optimiser</h3>
+            <h3 class="project-title" data-i18n="zf-title">Hardware Integration for a Battery Swap Station Optimiser</h3>
           </div>
-          <div class="project-meta">Collaboration with ZF Group</div>
+          <div class="project-meta" data-i18n="zf-meta">Collaboration with ZF Group</div>
 
           <div class="carousel" data-carousel>
             <div class="carousel-track">
-              <div class="carousel-slide"><img src="figures/Battery.png" alt="Reduced-scale battery swap station model"><p class="carousel-cap">Reduced-scale physical model of a battery swapping station</p></div>
+              <div class="carousel-slide"><img src="figures/Battery.png" alt="Reduced-scale battery swap station model"></div>
             </div>
             <button class="car-btn prev" aria-label="Previous">‹</button>
             <button class="car-btn next" aria-label="Next">›</button>
             <div class="car-dots"></div>
           </div>
 
-          <p class="project-text">Built a reduced-scale physical demonstrator of a battery-swap station, turning an optimisation model's decisions into live hardware behaviour.</p>
+          <p class="project-text" data-i18n="zf-text">Built a reduced-scale physical demonstrator of a battery-swap station, turning an optimisation model's decisions into live hardware behaviour.</p>
 
           <ul class="tag-list">
             <li>Arduino</li><li>Electronics Integration</li><li>Energy Systems</li>
@@ -263,50 +265,50 @@
 
         <!-- IN-WHEEL MOTOR -->
         <div class="project" id="motor">
-          <div class="project-date">Feb 2022 – Aug 2023</div>
+          <div class="project-date" data-i18n="motor-date">Feb 2022 – Aug 2023</div>
           <div class="project-head">
             <img class="project-logo" src="figures/RT-logo.png" alt="EPFL Racing Team logo">
-            <h3 class="project-title">In-Wheel Motor &amp; Gearbox for a Formula Student Car</h3>
+            <h3 class="project-title" data-i18n="motor-title">In-Wheel Motor &amp; Gearbox for a Formula Student Car</h3>
           </div>
           <div class="project-meta">EPFL Racing Team</div>
 
           <div class="carousel" data-carousel>
             <div class="carousel-track">
-              <div class="carousel-slide"><img src="figures/eclatee_joliee.png" alt="Exploded CAD view of wheel assembly"><p class="carousel-cap">Exploded CAD view of the wheel assembly</p></div>
-              <div class="carousel-slide"><img src="figures/LRT_RollOut.jpeg" alt="Final car"><p class="carousel-cap">Final car integrating the wheel assembly, EPFL Racing Team</p></div>
+              <div class="carousel-slide"><img src="figures/eclatee_joliee.png" alt="Exploded CAD view of wheel assembly"></div>
+              <div class="carousel-slide"><img src="figures/LRT_RollOut.jpeg" alt="Final car"></div>
             </div>
             <button class="car-btn prev" aria-label="Previous">‹</button>
             <button class="car-btn next" aria-label="Next">›</button>
             <div class="car-dots"></div>
           </div>
 
-          <p class="project-text">Designed the gearbox and led integration of an in-wheel propulsion system for a Formula Student car, from concept through to the raced vehicle.</p>
+          <p class="project-text" data-i18n="motor-text">Designed the gearbox and led integration of an in-wheel propulsion system for a Formula Student car, from concept through to the raced vehicle.</p>
 
           <ul class="tag-list">
             <li>CATIA / 3DEXPERIENCE</li><li>Gear Design</li><li>Thermal &amp; Mass Optimization</li>
           </ul>
 
-          <div class="linkbox"><span class="lbl">Learn more</span> &nbsp; EPFL Racing Team &nbsp; <a href="https://epflracingteam.ch" target="_blank" rel="noopener">epflracingteam.ch</a></div>
+          <div class="linkbox"><span class="lbl" data-i18n="motor-linkbox-lbl">Learn more</span> &nbsp; EPFL Racing Team &nbsp; <a href="https://epflracingteam.ch" target="_blank" rel="noopener">epflracingteam.ch</a></div>
         </div>
 
         <!-- GRIPPER -->
         <div class="project" id="gripper">
-          <div class="project-date">Sept 2024 – Jan 2025</div>
+          <div class="project-date" data-i18n="gripper-date">Sept 2024 – Jan 2025</div>
           <div class="project-head">
-            <h3 class="project-title">A Simple, Effective Gripper for a Robotic Arm</h3>
+            <h3 class="project-title" data-i18n="gripper-title">A Simple, Effective Gripper for a Robotic Arm</h3>
           </div>
-          <div class="project-meta">Personal project</div>
+          <div class="project-meta" data-i18n="gripper-meta">Personal project</div>
 
           <div class="carousel" data-carousel>
             <div class="carousel-track">
-              <div class="carousel-slide"><img src="figures/gripper_proto.jpeg" alt="Gripper prototype"><p class="carousel-cap">Functional gripper prototype</p></div>
+              <div class="carousel-slide"><img src="figures/gripper_proto.jpeg" alt="Gripper prototype"></div>
             </div>
             <button class="car-btn prev" aria-label="Previous">‹</button>
             <button class="car-btn next" aria-label="Next">›</button>
             <div class="car-dots"></div>
           </div>
 
-          <p class="project-text">Built a gripper that sets grip force mechanically instead of through active control, with a sensor to weigh what it holds.</p>
+          <p class="project-text" data-i18n="gripper-text">Built a gripper that sets grip force mechanically instead of through active control, with a sensor to weigh what it holds.</p>
 
           <ul class="tag-list">
             <li>Mechanical Design</li><li>Rapid Prototyping</li><li>Sensor Integration</li>
@@ -315,22 +317,22 @@
 
         <!-- HULL CLEANER -->
         <div class="project" id="hull">
-          <div class="project-date">Jan 2024 – Jun 2024</div>
+          <div class="project-date" data-i18n="hull-date">Jan 2024 – Jun 2024</div>
           <div class="project-head">
-            <h3 class="project-title">Autonomous Hull Cleaning Robot</h3>
+            <h3 class="project-title" data-i18n="hull-title">Autonomous Hull Cleaning Robot</h3>
           </div>
-          <div class="project-meta">Product development study, concept phase</div>
+          <div class="project-meta" data-i18n="hull-meta">Product development study, concept phase</div>
 
           <div class="carousel" data-carousel>
             <div class="carousel-track">
-              <div class="carousel-slide"><img class="img-sm" src="figures/Final_design_hull.jpg" alt="Hull cleaner final design render"><p class="carousel-cap">Final design render</p></div>
+              <div class="carousel-slide"><img class="img-sm" src="figures/Final_design_hull.jpg" alt="Hull cleaner final design render"></div>
             </div>
             <button class="car-btn prev" aria-label="Previous">‹</button>
             <button class="car-btn next" aria-label="Next">›</button>
             <div class="car-dots"></div>
           </div>
 
-          <p class="project-text">Concept study for an autonomous hull-cleaning robot, from user needs through architecture selection to detailed design.</p>
+          <p class="project-text" data-i18n="hull-text">Concept study for an autonomous hull-cleaning robot, from user needs through architecture selection to detailed design.</p>
 
           <ul class="tag-list">
             <li>Product Development</li><li>Systems Architecture</li><li>Actuator Selection</li>
@@ -342,8 +344,8 @@
 
     <!-- ===================== CONTACT TAB ===================== -->
     <section id="tab-contact" class="tab-panel">
-      <p class="eyebrow">Get in touch</p>
-      <h2 class="section-title">Let's build something that survives contact with reality</h2>
+      <p class="eyebrow" data-i18n="contact-eyebrow">Get in touch</p>
+      <h2 class="section-title" data-i18n="contact-title">Let's build something that survives contact with reality</h2>
       <div class="contact-card">
         <h3>Sébastien Roux</h3>
         <p>sebastienleonciniroux@gmail.com</p>
@@ -357,7 +359,7 @@
 
   </main>
 
-  <footer>© 2026 Sébastien Roux — Engineering Portfolio</footer>
+  <footer>© 2026 Sébastien Roux — <span data-i18n="footer-sub">Engineering Portfolio</span></footer>
 
   <script src="script.js"></script>
 </body>
