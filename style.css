@@ -145,6 +145,18 @@ a:hover { text-decoration: underline; }
 }
 .timeline-item { position: relative; padding-bottom: 2.6rem; }
 .timeline-item:last-child { padding-bottom: 0; }
+.timeline-item[data-project] {
+  cursor: pointer;
+  border-radius: 10px;
+  padding: .5rem .7rem 2.6rem;
+  margin: -.5rem -.7rem 0;
+  transition: transform .25s ease, background-color .25s ease;
+  transform-origin: left center;
+}
+.timeline-item[data-project]:hover {
+  transform: scale(1.015);
+  background-color: var(--bg-elev);
+}
 
 .timeline-logo {
   position: absolute;
@@ -191,6 +203,11 @@ a:hover { text-decoration: underline; }
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 1.8rem 2rem 2.2rem;
+  transition: border-color .4s ease, box-shadow .4s ease;
+}
+.project.project-highlight {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(47, 95, 214, 0.15);
 }
 .project-head { display: flex; align-items: center; gap: 1.1rem; margin-bottom: .3rem; padding-right: 8rem; }
 .project-logo { width: 72px; height: 72px; object-fit: contain; background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: .5rem; flex-shrink: 0; }

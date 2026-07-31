@@ -186,8 +186,30 @@ function initI18n() {
   apply(lang);
 }
 
+// ---------- CV timeline -> Projects tab links ----------
+function initTimelineLinks() {
+  document.querySelectorAll('.timeline-item[data-project]').forEach(item => {
+    item.addEventListener('click', () => {
+      const projectId = item.dataset.project;
+      const target = document.getElementById(projectId);
+      if (!target) return;
+
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === 'projects'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'tab-projects'));
+      history.replaceState(null, '', '#projects');
+
+      requestAnimationFrame(() => {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        target.classList.add('project-highlight');
+        setTimeout(() => target.classList.remove('project-highlight'), 1400);
+      });
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initTabs();
   initCarousels();
   initI18n();
+  initTimelineLinks();
 });
