@@ -13,29 +13,31 @@
 </head>
 <body>
 
-  <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">FR</button>
+  <div class="layout">
 
-  <!-- ===================== PERSISTENT TOP: PROFILE + TABS ===================== -->
-  <header class="topbar">
-    <div class="profile">
-      <div class="avatar-wrap">
-        <img class="avatar" src="figures/profile.jpg" alt="Sébastien Roux">
-        <span class="corner tl"></span>
-        <span class="corner tr"></span>
-        <span class="corner bl"></span>
-        <span class="corner br"></span>
+    <!-- ===================== SIDEBAR: PROFILE + NAV (persistent) ===================== -->
+    <aside class="sidebar">
+      <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">FR</button>
+      <div class="profile">
+        <div class="avatar-wrap">
+          <img class="avatar" src="figures/profile.jpg" alt="Sébastien Roux">
+          <span class="corner tl"></span>
+          <span class="corner tr"></span>
+          <span class="corner bl"></span>
+          <span class="corner br"></span>
+        </div>
+        <h1>Sébastien Roux</h1>
+        <p class="tagline" data-i18n="bio">Hey, I'm Seb! I'm a mechanical engineer who loves building things that survive the real world. I spend my free time either in or on the ocean and in the mountains. Don't hesitate to connect if you want to discuss!</p>
       </div>
-      <h1>Sébastien Roux</h1>
-      <p class="tagline" data-i18n="bio">Hey, I'm Seb! I'm a mechanical engineer who loves building things that survive the real world. I spend my free time either in or on the ocean and in the mountains. Don't hesitate to connect if you want to discuss!</p>
-    </div>
-    <nav class="tabs" role="tablist">
-      <button class="tab-btn active" data-tab="cv">CV</button>
-      <button class="tab-btn" data-tab="projects" data-i18n="tab-projects">Projects</button>
-      <button class="tab-btn" data-tab="contact">Contact</button>
-    </nav>
-  </header>
+      <nav class="tabs" role="tablist">
+        <button class="tab-btn active" data-tab="cv">CV</button>
+        <button class="tab-btn" data-tab="projects" data-i18n="tab-projects">Projects</button>
+        <button class="tab-btn" data-tab="contact">Contact</button>
+      </nav>
+    </aside>
 
-  <main class="wrap">
+    <div class="content">
+    <main class="wrap">
 
     <!-- ===================== CV TAB ===================== -->
     <section id="tab-cv" class="tab-panel active">
@@ -365,6 +367,8 @@
   </main>
 
   <footer>© 2026 Sébastien Roux · <span data-i18n="footer-sub">Engineering Portfolio</span></footer>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
