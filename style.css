@@ -51,19 +51,25 @@ a:hover { text-decoration: underline; }
 /* ---------- Persistent top: profile + tabs ---------- */
 .topbar {
   border-bottom: 1px solid var(--border);
-  padding: 3.2rem 1.5rem 0;
-  text-align: center;
   background:
-    radial-gradient(ellipse 800px 400px at 50% -10%, rgba(20,83,154,0.07), transparent 70%),
+    radial-gradient(ellipse 800px 400px at 0% -20%, rgba(20,83,154,0.07), transparent 65%),
     repeating-linear-gradient(0deg, var(--grid-line) 0 1px, transparent 1px 28px),
     repeating-linear-gradient(90deg, var(--grid-line) 0 1px, transparent 1px 28px),
     var(--bg);
 }
 
+.topbar-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.4rem;
+  padding: 3rem 1.5rem;
+  text-align: left;
+}
+
 .avatar-wrap {
   position: relative;
-  width: 240px; height: 240px;
-  margin: 0 auto 1.6rem;
+  width: 168px; height: 168px;
+  flex-shrink: 0;
   border-radius: 8px;
 }
 .avatar {
@@ -84,8 +90,10 @@ a:hover { text-decoration: underline; }
 .corner.bl { bottom: -9px; left: -9px; border-bottom: 3px solid var(--accent); border-left: 3px solid var(--accent); }
 .corner.br { bottom: -9px; right: -9px; border-bottom: 3px solid var(--accent); border-right: 3px solid var(--accent); }
 
+.profile { flex: 1; min-width: 0; padding-top: .2rem; }
+
 .profile h1 {
-  font-size: 1.9rem;
+  font-size: 2.1rem;
   font-weight: 700;
   letter-spacing: -.02em;
   margin: 0 0 .5rem;
@@ -94,15 +102,16 @@ a:hover { text-decoration: underline; }
 .tagline {
   color: var(--text-dim);
   font-size: 1.02rem;
-  max-width: 500px;
-  margin: 0 auto 1.6rem;
+  max-width: 560px;
+  margin: 0 0 1.4rem;
 }
 
 .tabs {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: .4rem;
-  margin-top: 1.4rem;
+  margin-top: .4rem;
+  margin-left: -1.3rem;
 }
 .tab-btn {
   font-family: var(--mono);
@@ -315,10 +324,13 @@ footer { text-align: center; color: var(--text-dim); font-size: .82rem; padding:
 
 /* ---------- Responsive ---------- */
 @media (max-width: 700px) {
-  .avatar-wrap { width: 190px; height: 190px; }
+  .topbar-inner { flex-direction: column; align-items: center; text-align: center; gap: 1.2rem; padding: 2.4rem 1.5rem 0; }
+  .avatar-wrap { width: 170px; height: 170px; }
+  .profile { padding-top: 0; }
+  .tagline { margin: 0 auto 1.2rem; }
+  .tabs { justify-content: center; margin-left: 0; gap: 0; }
   .timeline { margin-left: .5rem; padding-left: 2.2rem; }
   .timeline-logo { width: 2.9rem; height: 2.9rem; left: -2.2rem; }
-  .tabs { gap: 0; }
   .tab-btn { padding: 1rem .8rem; font-size: .72rem; }
   .project { padding: 1.4rem 1.3rem 1.8rem; }
   .project-head { padding-right: 0; flex-wrap: wrap; }
