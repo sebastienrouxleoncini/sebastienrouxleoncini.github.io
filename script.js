@@ -103,9 +103,9 @@ const frText = {
   'cv-master-org': "EPFL · spécialisation Conception et Production, mineur Management de la Technologie et Entrepreneuriat",
 
   'cv-racing-date': "Fév. 2022 – Août 2023",
-  'cv-racing-title': "Propulsion électrique in-wheel",
+  'cv-racing-title': "Propulsion in-wheel et volant",
   'cv-racing-org': "EPFL Racing Team · Formula Student",
-  'cv-racing-desc': "Conception et optimisation d'une boîte de vitesses in-wheel sous fortes contraintes thermiques, massiques et réglementaires, du concept jusqu'à la voiture de course.",
+  'cv-racing-desc': "Conception et optimisation d'une boîte de vitesses in-wheel sous fortes contraintes thermiques, massiques et réglementaires, du concept jusqu'à la voiture de course. Également conception et fabrication d'un volant ergonomique en fibre de carbone, à commandes électroniques intégrées.",
 
   'cv-bachelor-date': "2019 – 2023",
   'cv-bachelor-title': "Bachelor en génie mécanique",
