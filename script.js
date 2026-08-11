@@ -144,8 +144,8 @@ const frText = {
   'zf-text': "Construction d'un démonstrateur physique à échelle réduite d'une station d'échange de batteries, traduisant les décisions d'un modèle d'optimisation en comportement matériel réel.",
 
   'motor-date': "Fév. 2022 – Août 2023",
-  'motor-title': "Moteur et boîte de vitesses in-wheel pour une voiture Formula Student",
-  'motor-text': "Conception de la boîte de vitesses et intégration du système de propulsion in-wheel pour une voiture Formula Student, du concept jusqu'à la voiture de course.",
+  'motor-title': "Moteur, boîte de vitesses et volant pour une voiture Formula Student",
+  'motor-text': "Conception de la boîte de vitesses et intégration du système de propulsion in-wheel pour une voiture Formula Student, du concept jusqu'à la voiture de course. Également en charge de la conception et de la fabrication d'un volant ergonomique en fibre de carbone, à commandes électroniques intégrées.",
   'motor-linkbox-lbl': "En savoir plus",
 
   'gripper-date': "Sept. 2024 – Janv. 2025",
