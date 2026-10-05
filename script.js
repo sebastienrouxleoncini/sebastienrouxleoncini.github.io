@@ -74,7 +74,7 @@ const frText = {
   'role': "Ingénieur d'études · Procédés · Hardware · Conception mécanique",
   'tab-projects': "Projets",
 
-  'cv-airaro2-date': "Oct. 2026 – Janv. 2027",
+  'cv-airaro2-date': "Sept. 2026 – Janv. 2027",
   'cv-airaro2-title': "Ingénieur d'études",
   'cv-airaro2-org': "AIRARO SAS · CDD",
   'cv-airaro2-desc': "Modélisation pour le dimensionnement de centrales SWAC et rédaction de dossiers d'appel d'offres. Évolution de l'outil de dimensionnement développé pendant mon travail de Master.",
