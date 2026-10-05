@@ -70,8 +70,14 @@ function initCarousels() {
 
 // ---------- Language toggle (English default, French translations below) ----------
 const frText = {
-  'bio': "Bonjour, moi c'est Sébastien ! Ingénieur mécanicien, je suis passionné par la conception de systèmes, leur mise à l'épreuve et leur amélioration continue. De la robotique aux systèmes énergétiques renouvelables, je suis toujours curieux de contribuer à faire avancer le monde. N'hésitez pas à me contacter si vous souhaitez échanger !",
+  'bio': "Bonjour, moi c'est Sébastien ! Ingénieur d'études, je conçois des systèmes concrets, des premiers calculs thermiques, structurels et hydrauliques jusqu'au matériel déployé sur le terrain. Ce qui me passionne, c'est de construire des choses qui fonctionnent, de la robotique aux systèmes énergétiques renouvelables. N'hésitez pas à me contacter si vous souhaitez échanger !",
+  'role': "Ingénieur d'études · Procédés · Hardware · Conception mécanique",
   'tab-projects': "Projets",
+
+  'cv-airaro2-date': "Oct. 2026 – Janv. 2027",
+  'cv-airaro2-title': "Ingénieur d'études",
+  'cv-airaro2-org': "AIRARO SAS · CDD",
+  'cv-airaro2-desc': "Modélisation pour le dimensionnement de centrales SWAC et rédaction de dossiers d'appel d'offres. Évolution de l'outil de dimensionnement développé pendant mon travail de Master.",
 
   'cv-airaro-date': "Mars 2026 – Sept. 2026",
   'cv-airaro-title': "Ingénieur en R&D",
